@@ -1,0 +1,360 @@
+{
+	"id": "6260fd3f98497201a500000f",
+	"scheme": {
+		"order": [
+			"numberObject",
+			"selectTab",
+			"dateTime",
+			"areaObject",
+			"info",
+			"members",
+			"requestObject",
+			"issueObject",
+			"inControlObject",
+			"checkStatus"
+		],
+		"properties": {
+			"info": {
+				"type": "object",
+				"order": [
+					"testType",
+					"laboratory",
+					"typeOfLaboratory",
+					"comment",
+					"volume",
+					"cafm"
+				],
+				"properties": {
+					"cafm": {
+						"type": "cafm",
+						"title": "Отметка на РД",
+						"viewId": "62e7c6832e0e9a012300040b"
+					},
+					"volume": {
+						"type": "textarea",
+						"title": "Объём испытаний",
+						"description": "Введите объём"
+					},
+					"comment": {
+						"type": "textarea",
+						"title": "Описание объекта съёмки",
+						"description": "Введите описание"
+					},
+					"testType": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"laboratory"
+								],
+								"type": "string",
+								"title": "Лабораторное"
+							},
+							{
+								"enum": [
+									"geodetic"
+								],
+								"type": "string",
+								"title": "Геодезическое"
+							}
+						],
+						"title": "Тип испытания",
+						"default": "laboratory",
+						"variant": "button",
+						"helperText": "В зависимости от типа испытания изменяется набор полей для заполнения."
+					},
+					"laboratory": {
+						"type": "dictionary",
+						"title": "Лаборатория *",
+						"description": "Выбрать лабораторию",
+						"dictionaryName": "polus_laboratory"
+					},
+					"typeOfLaboratory": {
+						"type": "dictionary",
+						"title": "Вид лабораторных испытаний *",
+						"description": "Выбрать вид испытаний",
+						"dictionaryName": "polus_type_of_laboratory"
+					}
+				}
+			},
+			"crCheck": {
+				"type": "text",
+				"hidden": true
+			},
+			"members": {
+				"type": "object",
+				"order": [
+					"applicant",
+					"executor"
+				],
+				"properties": {
+					"executor": {
+						"type": "user",
+						"title": "Исполнитель *"
+					},
+					"applicant": {
+						"type": "user",
+						"title": "Заявитель"
+					}
+				}
+			},
+			"dateTime": {
+				"type": "object",
+				"order": [
+					"number",
+					"dateTimeStart",
+					"dateTimeEnd"
+				],
+				"properties": {
+					"dateTimeEnd": {
+						"type": "date",
+						"title": "Срок предоставления результатов испытания *",
+						"description": "Выберите срок"
+					},
+					"dateTimeStart": {
+						"type": "datetime",
+						"title": "Дата и время проведения испытания *",
+						"description": "Выберите дату и время"
+					}
+				}
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"request",
+					"issue",
+					"inControl",
+					"process"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Приёмка работ",
+					"Замечание",
+					"Входной контроль",
+					"Процесс"
+				]
+			},
+			"areaObject": {
+				"type": "object",
+				"properties": {
+					"area": {
+						"type": "dictionary",
+						"title": "Участок *",
+						"isTree": true,
+						"multiple": false,
+						"description": "Выберите участок",
+						"dictionaryName": "polus_area"
+					}
+				}
+			},
+			"checkStatus": {
+				"type": "object",
+				"order": [
+					"applicantStatus",
+					"executorStatus",
+					"trialReason",
+					"trialResult",
+					"exitCheck"
+				],
+				"properties": {
+					"exitCheck": {
+						"type": "checkboxes",
+						"items": {
+							"enum": [
+								1
+							],
+							"type": "number",
+							"enumNames": [
+								"Да, завершить"
+							]
+						},
+						"title": "Завершить испытание?",
+						"hidden": false,
+						"minItems": 0,
+						"readOnly": false,
+						"helperText": "Прежде чем завершить испытание, проверьте корректность предоставленных результатов. После завершения испытание нельзя будет редактировать."
+					},
+					"trialReason": {
+						"type": "textarea",
+						"title": "Описание причины ",
+						"hidden": true,
+						"multiple": true,
+						"helperText": "Чтобы отклонить участие, необходимо описать причину",
+						"description": "Укажите причину отклонения"
+					},
+					"trialResult": {
+						"type": "attachments",
+						"title": "Результат испытания",
+						"hidden": false,
+						"helperText": "Подтвердите предоставление результатов ниже чтобы изменить статус исполнения"
+					},
+					"executorStatus": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notAccept"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": "Статус исполнителя",
+						"hidden": false,
+						"variant": "button"
+					},
+					"applicantStatus": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notReady"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не готов к испытанию"
+							},
+							{
+								"enum": [
+									"ready"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Готов к испытанию"
+							}
+						],
+						"title": "Статус заявителя",
+						"variant": "button",
+						"helperText": "Чтобы ваше испытание отправилась на рассмотрение, измените статус на «Готов к испытанию». Для этого нужно заполнить все обязательные поля. Если вы пока не можете это сделать, сохраните испытание в статусе «Не готов к испытанию» и завершите заполнение позже."
+					}
+				}
+			},
+			"issueObject": {
+				"type": "object",
+				"properties": {
+					"issue": {
+						"type": "view",
+						"title": "Замечание",
+						"viewId": "623b11816c5347019d00001c",
+						"multiple": false,
+						"canCreate": true,
+						"description": "Выберите замечание"
+					}
+				}
+			},
+			"issueStatus": {
+				"type": "dictionary",
+				"title": "status",
+				"hidden": true,
+				"dictionaryName": "polus_trial_status"
+			},
+			"numberObject": {
+				"type": "object",
+				"properties": {
+					"number": {
+						"type": "text",
+						"title": "Номер испытания",
+						"description": "Введите номер испытания"
+					}
+				}
+			},
+			"executorCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"requestObject": {
+				"type": "object",
+				"properties": {
+					"request": {
+						"type": "view",
+						"title": "Приёмка работ",
+						"viewId": "627cc1be98497201a50003db",
+						"multiple": false,
+						"canCreate": true,
+						"description": "Приёмка работ"
+					}
+				}
+			},
+			"applicantCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"inControlObject": {
+				"type": "object",
+				"properties": {
+					"inControl": {
+						"type": "view",
+						"title": "Входной контроль",
+						"viewId": "62a9813198497201a50010c8",
+						"multiple": false,
+						"canCreate": true,
+						"description": "Выберите входной контроль"
+					}
+				}
+			}
+		}
+	},
+	"title": "Испытания",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-04-21T06:44:44.548Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"6260fd3f98497201a500000f_6304e00000cbbd40a81ddea0": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_630496160016e340a86df273": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_630487e000e7a640ba0933b7": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_6304868c0032f240afded282": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62ff76a1003e28408a756669": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62ff7073000d1e40aba889f4": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62f369614bbbf040a54c332f": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62f2528d00e2ef40b2dbb485": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62f237fe0078f4409586e370": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62eba29100d488409a6d9c5d": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62eb99b100e19d4088862bc0": {
+			"RELATED_TO": true
+		},
+		"6260fd3f98497201a500000f_62eb914a00456940a6d097dd": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1650523455047,
+	"updatedDate": 1660806303186,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,40 @@
+{
+	"id": "62f26c432e0e9a0123000ab6",
+	"templateName": "ПробаПредписания",
+	"SQL": "[{\"title\": \"isr\", \"sqlRequest\": \"select si.t_num, si.cr_date, si.com, si.rem_ac, si.due_date, si.stop_work, case when si.area_name is not null then si.area_name::text else '' end as area_name, si.rd_name, case when si.work_type_name is not null then si.work_type_name::text else '' end as work_type_name, case when si.exec_name is not null then si.exec_name::text else '' end as exec_name, case when si.exec_position is not null then si.exec_position::text else 'Должность ' end as exec_position, case when si.exec_organization is not null then si.exec_organization::text else '' end as exec_organization, case when si.resp_name is not null then si.resp_name::text else '' end as resp_name, case when si.resp_position is not null then si.resp_position::text else 'Должность ' end as resp_position, case when si.resp_organization is not null then si.resp_organization::text else '' end as resp_organization from (select fi.t_num, fi.cr_date, fi.com, fi.rem_ac, fi.due_date, fi.stop_work, fi.rd_name, fi.is_status, concat(pas.name, pa.name) as area_name, ptw.name as work_type_name, ue.name as exec_name, ue.position as exec_position, ue.organization as exec_organization, ur.name as resp_name, ur.position as resp_position, ur.organization as resp_organization from (select case when (data ? 'numberObject') then (data -> 'numberObject') ->> 'number' else ' ' end as t_num, created_at::date as cr_date, case when (data -> 'info') ? 'area' then ((data -> 'info') -> 'area') ->> 0 else ' ' end as area_id, case when (data -> 'info') ? 'cafm' then (((data -> 'info') -> 'cafm') -> 'document') ->> 'name' else ' ' end as rd_name, case when (data -> 'info') ? 'typeOfWork' then((data -> 'info') -> 'typeOfWork') ->> 0 else ' ' end as work_type, case when (data -> 'members') ? 'executor' then ((data -> 'members') -> 'executor') ->> 0 else ' ' end as exec_id, ((data -> 'members') -> 'responsible') ->> 0 as resp_id, concat(case when ((data -> 'info')->> 'stopWork') = 'no' then 'Не требует ' else 'Требует ' end, 'остановки работ') as stop_work, case when (data ? 'attachmentsAndComment') and (data -> 'attachmentsAndComment') ? 'comment' then (data -> 'attachmentsAndComment') ->> 'comment' else ' ' end as com, case when (data -> 'info') ? 'remedialAction' then (data -> 'info') ->> 'remedialAction' else ' ' end as rem_ac, case when (data -> 'info') ->> 'dateTime' != '0' then to_char(to_timestamp(to_number((data -> 'info') ->> 'dateTime','9999999999')), 'DD.MM.YYYY') else ' ' end as due_date, (data -> 'issueStatus') ->> 0 as is_status from form_instances where \\\"isArchived\\\" = false and \\\"formId\\\" = '623b0f296c5347019d00000c' <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if> ) fi left join public.polus_type_of_work ptw on fi.work_type = ptw.id::text left join public.user ue on exec_id = ue.id left join public.user ur on resp_id = ur.id left join public.polus_area pa on fi.area_id = pa.id::text left join public.polus_area pas on pa.parent_id = pas.id ) si\"}, {\"title\": \"attachments\", \"sqlRequest\": \"{many}select count (att_info) as ats_num, jsonb_agg (att_info::jsonb) as all_att from (select t_num, jsonb_build_object ('att_num'::text,ord, 'attUrl'::text, att_url) as att_info from (select row_number() over (partition by t2.t_num) as ord, t2.t_num, concat ('https://288120.selcdn.ru/platform-s3/', d.url) as att_url from (select t_num, jsonb_array_elements_text (att_ids) as att_id from (select case when (data ? 'attachmentsAndComment') and (data -> 'attachmentsAndComment') ? 'attachments' then (data -> 'attachmentsAndComment') -> 'attachments' else null end as att_ids, case when (data ? 'numberObject') then (data -> 'numberObject') ->> 'number' else ' ' end as t_num from form_instances where \\\"isArchived\\\" = false and \\\"formId\\\" = '623b0f296c5347019d00000c' <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if> ) t1 ) t2 left join \\\"document\\\" d on t2.att_id = d.id where d.name like '%.jpg' or d.name like '%.png' ) t3 ) t4 group by t_num\"},{\"title\": \"act\", \"sqlRequest\": \"select si.num, si.cr_date, case when si.area_name is not null then si.area_name::text else '' end as area, case when si.exec_name is not null then si.exec_name::text else '' end as ex_name, case when si.exec_position is not null then si.exec_position::text else 'Должность ' end as ex_pos, case when si.exec_organization is not null then si.exec_organization::text else '' end as ex_org, case when si.resp_name is not null then si.resp_name::text else '' end as rp_name, case when si.resp_position is not null then si.resp_position::text else 'Должность ' end as rp_pos, case when si.resp_organization is not null then si.resp_organization::text else '' end as rp_org from (select fi.num, fi.cr_date, fi.is_status, concat(pas.name, pa.name) as area_name, ue.name as exec_name, ue.position as exec_position, ue.organization as exec_organization, ur.name as resp_name, ur.position as resp_position, ur.organization as resp_organization from (select case when (data ? 'numberObject') then (data -> 'numberObject') ->> 'number' else ' ' end as num, created_at::date as cr_date, case when (data -> 'info') ? 'area' then ((data -> 'info') -> 'area') ->> 0 else ' ' end as area_id, case when (data -> 'info') ? 'cafm' then (((data -> 'info') -> 'cafm') -> 'document') ->> 'name' else ' ' end as rd_name, case when (data -> 'info') ? 'typeOfWork' then((data -> 'info') -> 'typeOfWork') ->> 0 else ' ' end as work_type, case when (data -> 'members') ? 'executor' then ((data -> 'members') -> 'executor') ->> 0 else ' ' end as exec_id, ((data -> 'members') -> 'responsible') ->> 0 as resp_id, concat(case when ((data -> 'info')->> 'stopWork') = 'no' then 'Не требует ' else 'Требует ' end, 'остановки работ') as stop_work, case when (data ? 'attachmentsAndComment') and (data -> 'attachmentsAndComment') ? 'comment' then (data -> 'attachmentsAndComment') ->> 'comment' else ' ' end as com, case when (data -> 'info') ? 'remedialAction' then (data -> 'info') ->> 'remedialAction' else ' ' end as rem_ac, case when (data -> 'info') ->> 'dateTime'  != '0' then to_char(to_timestamp(to_number((data -> 'info') ->> 'dateTime','9999999999')), 'DD.MM.YYYY') else ' ' end as due_date, (data -> 'issueStatus') ->> 0 as is_status from form_instances where \\\"isArchived\\\" = false and \\\"formId\\\" = '623b0f296c5347019d00000c' <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if> ) fi left join public.user ue on exec_id = ue.id left join public.user ur on resp_id = ur.id left join public.polus_area pa on fi.area_id = pa.id::text left join public.polus_area pas on pa.parent_id = pas.id ) si WHERE is_status = 'closed'\"}]",
+	"metadata": null,
+	"fileTitle": "Пробный ворд от {reportDate}",
+	"formId": "62c56c222e0e9a0123000008",
+	"filenameExtension": "docx",
+	"published_at": "2022-08-10T06:35:47.966Z",
+	"locationFilter": "^view.*",
+	"template": {
+		"id": 60,
+		"uuid": "6308737ca390a201250005ea",
+		"name": "PolusШаблон2 (13).docx",
+		"alternativeText": "",
+		"caption": "",
+		"width": null,
+		"height": null,
+		"formats": null,
+		"hash": "Polus_Shablon2_13_5d0111d03e",
+		"ext": ".docx",
+		"mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+		"size": 40.03,
+		"url": "/selectel?filePath=development/Polus_Shablon2_13_5d0111d03e.docx",
+		"previewUrl": null,
+		"provider": "selectel",
+		"provider_metadata": null,
+		"created_at": "2022-08-26T07:17:16.763Z",
+		"updated_at": "2022-08-26T07:17:16.787Z"
+	},
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1660054595469,
+	"updatedDate": 1661498239050,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

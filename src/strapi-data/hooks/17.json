@@ -1,0 +1,13 @@
+{
+	"id": "628e232098497201a5000838",
+	"title": "Polus_Trial_canDelete",
+	"hookType": "canDelete",
+	"function": "function canDelete(props) {\n   const { item, user } = props;\n   let flag_p = false;\n   const user_ID = user.id;\n   console.log(item);\n   if (item.data.members) {\n         if (user_ID.includes(item.data.members.applicant)) {\n            flag_p = true;\n         }\n    }\n  \n   return flag_p;\n}",
+	"form": "6260fd3f98497201a500000f",
+	"relationsData": [],
+	"createdDate": 1653482272333,
+	"updatedDate": 1655967498748,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

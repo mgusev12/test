@@ -1,0 +1,40 @@
+{
+	"id": "6308d071a390a201250006d5",
+	"templateName": "Заявка на испытание",
+	"SQL": "[{\"title\": \"test\", \"sqlRequest\": \"SELECT CASE WHEN {reportDate} is not null THEN to_char({reportDate}::date, 'DD.MM.YYYY') ELSE ' ' END AS req_date, num, rd_code, procent, due_date, CASE WHEN area IS NOT NULL THEN area ELSE '' END AS area, CASE WHEN app_org IS NOT NULL THEN app_org ELSE '' END AS app_org, CASE WHEN app_pos IS NOT NULL THEN app_pos ELSE 'Должность' END AS app_pos, CASE WHEN ex_org IS NOT NULL THEN ex_org ELSE '' END AS exec_org, CASE WHEN ex_pos IS NOT NULL THEN ex_pos ELSE 'Должность' END AS exec_pos, CASE WHEN lab_type IS NOT NULL THEN lab_type ELSE '' END AS lab_type FROM (select ft.num, ft,rd_code, ft.procent, ft.due_date, concat(pas.name, pao.name) AS area, pua.organization AS app_org, pua.\\\"position\\\" AS app_pos, pue.organization AS ex_org, pue.\\\"position\\\" AS ex_pos, tol.name AS lab_type from (SELECT (DATA -> 'info') ->> 'testType' AS test_type, CASE WHEN (DATA -> 'info') ? 'typeOfLaboratory' THEN ((DATA -> 'info') -> 'typeOfLaboratory') ->> 0 ELSE NULL END AS lab_type, CASE WHEN (DATA -> 'info') ? 'casm' THEN (((DATA -> 'info') -> 'cafm') -> 'document') ->> 'name' ELSE '' END AS rd_code, ((DATA -> 'members') -> 'applicant') ->> 0 AS app_id, CASE WHEN (DATA -> 'members') ? 'executor' THEN ((DATA -> 'members') -> 'executor') ->> 0 ELSE NULL END AS ex_id, CASE WHEN DATA ? 'areaObject' THEN ((DATA -> 'areaObject') -> 'area') ->> 0 ELSE NULL END AS area_id, (DATA -> 'numberObject') ->> 'number' AS num, CASE WHEN (DATA -> 'info') ? 'volume' THEN (DATA -> 'info') ->> 'volume' ELSE '' END AS procent, CASE WHEN (DATA -> 'dateTime') ->> 'dateTimeEnd' != '0' THEN to_char(to_timestamp(to_number((DATA -> 'dateTime') ->> 'dateTimeEnd','9999999999')), 'DD.MM.YYYY') else ' ' end as due_date FROM form_instances where \\\"isArchived\\\" = false and \\\"formId\\\" = '6260fd3f98497201a500000f' <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if>) ft LEFT JOIN public.user pua ON ft.app_id = pua.id::TEXT LEFT JOIN public.user pue ON ft.ex_id = pue.id::TEXT LEFT JOIN public.polus_area pao ON ft.area_id = pao.id::TEXT LEFT JOIN public.polus_area pas ON pao.parent_id = pas.id LEFT JOIN public.polus_type_of_laboratory tol ON ft.lab_type = tol.id::TEXT WHERE ft.test_type = 'laboratory') st\"}]",
+	"metadata": null,
+	"fileTitle": "Заявка на испытание №{reportNumber} от {reportDate}",
+	"formId": "62c56c222e0e9a0123000008",
+	"filenameExtension": "docx",
+	"published_at": "2022-08-26T13:54:01.746Z",
+	"locationFilter": "^view.*",
+	"template": {
+		"id": 63,
+		"uuid": "630c6109a390a201250006f2",
+		"name": "Заявка на испытание (3).docx",
+		"alternativeText": "",
+		"caption": "",
+		"width": null,
+		"height": null,
+		"formats": null,
+		"hash": "Zayavka_na_ispytanie_3_4928d128be",
+		"ext": ".docx",
+		"mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+		"size": 22.73,
+		"url": "/selectel?filePath=development/Zayavka_na_ispytanie_3_4928d128be.docx",
+		"previewUrl": null,
+		"provider": "selectel",
+		"provider_metadata": null,
+		"created_at": "2022-08-29T06:47:37.507Z",
+		"updated_at": "2022-08-29T06:47:37.532Z"
+	},
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1661522033895,
+	"updatedDate": 1661761407668,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,105 @@
+{
+	"id": "6305d5d5007894409406fd16",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"cafm": {
+				"pin": {
+					"h": 42,
+					"w": 28,
+					"id": "6305e5560017c54090b5fea7",
+					"name": "anno-image",
+					"angle": 0,
+					"image": {},
+					"bounds": {
+						"left-top": {
+							"x": 887.12353515625,
+							"y": 275.0674133300781
+						},
+						"right-bottom": {
+							"x": 915.12353515625,
+							"y": 317.0674133300781
+						}
+					},
+					"points": [
+						{
+							"x": 887.12353515625,
+							"y": 275.0674133300781
+						}
+					],
+					"styles": {
+						"fillStyle": "rgb(255,0,0)",
+						"lineWidth": 2,
+						"strokeStyle": "rgb(255,0,0)"
+					},
+					"imageUrl": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzNiA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDQ5QzE5Ljc3NSA0OSAyMS4yMjIyIDQ3LjU2NjcgMjEuMjIyMiA0NS43ODg0QzIxLjIyMjIgNDQuMDEwMiAxOS43NzUgNDIuNTc2OSAxOCA0Mi41NzY5QzE2LjIyNSA0Mi41NzY5IDE0Ljc3NzggNDQuMDEwMiAxNC43Nzc4IDQ1Ljc4ODRDMTQuNzc3OCA0Ny41NjY3IDE2LjIyNSA0OSAxOCA0OVoiIGZpbGw9IiM2QjcyODAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjguMTg1OCAzMC41NjgyTDI4LjE4NjQgMzAuNTY3OEMzMi4zMTMyIDI3LjU4IDM1IDIyLjgwOTMgMzUgMTcuNDIxQzM1IDguMzE3NTEgMjcuMzUzOCAxIDE4IDFDOC42NDYyMiAxIDEgOC4zMTc1MSAxIDE3LjQyMUMxIDIyLjgwOTUgMy42ODY0MiAyNy41ODExIDcuODEzNTkgMzAuNTY4OUw3LjgxNDE3IDMwLjU2OTRDOC44NjY1NiAzMS4zMzAxIDkuODU1MDUgMzEuOTM4NCAxMC43MjE3IDMyLjQ3MTdDMTAuNzYyMiAzMi40OTY2IDEwLjgwMjQgMzIuNTIxNCAxMC44NDI0IDMyLjU0NkMxMS43NTM0IDMzLjEwNjggMTIuNDk0MiAzMy41NyAxMy4wOTk3IDM0LjA2NkMxMy42OTE3IDM0LjU1MDggMTQuMTE2NiAzNS4wMzgxIDE0LjQwMjMgMzUuNjIwMUMxNC42ODc5IDM2LjIwMTkgMTQuODY2NyAzNi45NDQgMTQuODY2NyAzNy45ODIzQzE0Ljg2NjcgMzkuNzA0NiAxNi4zMDQ2IDQxLjAzODUgMTggNDEuMDM4NUMxOS42OTU0IDQxLjAzODUgMjEuMTMzMyAzOS43MDQ2IDIxLjEzMzMgMzcuOTgyM0MyMS4xMzMzIDM2Ljk0NCAyMS4zMTIxIDM2LjIwMTggMjEuNTk3NyAzNS42MTk5QzIxLjg4MzUgMzUuMDM3NyAyMi4zMDg0IDM0LjU1MDMgMjIuOTAwNCAzNC4wNjUzQzIzLjUwNTkgMzMuNTY5MyAyNC4yNDY3IDMzLjEwNTkgMjUuMTU3NyAzMi41NDVDMjUuMTk3OSAzMi41MjAyIDI1LjIzODUgMzIuNDk1MiAyNS4yNzkzIDMyLjQ3MDFDMjYuMTQ1NyAzMS45MzY4IDI3LjEzMzkgMzEuMzI4NyAyOC4xODU4IDMwLjU2ODJaIiBmaWxsPSIjNkI3MjgwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGVsbGlwc2UgY3g9IjE4IiBjeT0iMTcuOTIzMSIgcng9IjcuMTExMTEiIHJ5PSI3LjA3NjkyIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+				},
+				"shapes": [],
+				"document": {
+					"id": "63ebf995-fcb8-4100-8886-1be8c9e2cef0",
+					"src": "https://288120.selcdn.ru/platform-s3/plans/db88f579-4322-4bd7-a664-dbf4a3cd1cb9/sheet/1/manifest.json",
+					"name": "Чертеж 3",
+					"parent_id": "67dca4f5-d142-417f-9b1a-79099cc437c8"
+				}
+			},
+			"dateTime": 0,
+			"stopWork": "no",
+			"typeOfWork": [
+				"d652684d-a167-48d4-87d0-b861efd6f626"
+			],
+			"criticality": "notCritical",
+			"disturbedPoint": [
+				"f722d0c6-2150-4a85-a8bc-7c49e642adea"
+			],
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"628b7c8217562056fee363c0"
+			],
+			"responsible": [
+				"62eb8c09cb0eeb1d34ca79b3"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 0,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"draft"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"responsibleStatus": "notIssued"
+		},
+		"numberObject": {
+			"number": 96
+		},
+		"executorCheck": "628b7c8217562056fee363c0",
+		"responsibleCheck": "62eb8c09cb0eeb1d34ca79b3"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"62eb8c09cb0eeb1d34ca79b3",
+		"628b7c8217562056fee363c0"
+	],
+	"relationsData": {
+		"62eb8c09cb0eeb1d34ca79b3_6305d5d5007894409406fd16": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_6305d5d5007894409406fd16": {
+			"RELATED_TO": true
+		},
+		"628b7c8217562056fee363c0_6305d5d5007894409406fd16": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1661326817981,
+	"updatedDate": 1661330794816,
+	"assignedTo": "628b7c8217562056fee363c0",
+	"parent": null
+}

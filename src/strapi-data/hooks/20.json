@@ -1,0 +1,13 @@
+{
+	"id": "6290b3d298497201a500091c",
+	"title": "Polus_Request_onCreate",
+	"hookType": "onCreate",
+	"function": "function onCreate(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n    let author = []\n\n    response.data.subcontractor = {user:[user.id], selectOne: 'notReady', check: 'subcontractor'};\n    response.data.dateTimeDuration = {dateTime: 0, duration: []};\n    response.data.areaObject = {area: []};\n    response.data.actAndTypeOfWorkObject = {act: '', rdCode: [], typeOfWork: [], rdAttachments: []};\n    response.data.customerRepresentative = {user:[], check: 'customerRepresentative'};\n    response.data.representativeDesignerSupervisor = {user:[],check: 'representativeDesignerSupervisor'};\n    response.data.result = {}\n    response.data.crCheck = \"1\"\n    return response;\n}",
+	"form": "6260fd7098497201a5000013",
+	"relationsData": [],
+	"createdDate": 1653650386031,
+	"updatedDate": 1660040743686,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,117 @@
+{
+	"id": "63048ad300295140900aa9ed",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"82fd4bc3-3e6c-4603-af2a-0570d291a514"
+			],
+			"cafm": {
+				"pin": {
+					"h": 42,
+					"w": 28,
+					"id": "63048bc02c45c340bdc9b191",
+					"name": "anno-image",
+					"angle": 0,
+					"image": {},
+					"bounds": {
+						"left-top": {
+							"x": 57.9444465637207,
+							"y": 74.90279388427734
+						},
+						"right-bottom": {
+							"x": 85.9444465637207,
+							"y": 116.90279388427734
+						}
+					},
+					"points": [
+						{
+							"x": 57.9444465637207,
+							"y": 74.90279388427734
+						}
+					],
+					"styles": {
+						"fillStyle": "rgb(255,0,0)",
+						"lineWidth": 2,
+						"strokeStyle": "rgb(255,0,0)"
+					},
+					"imageUrl": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzNiA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDQ5QzE5Ljc3NSA0OSAyMS4yMjIyIDQ3LjU2NjcgMjEuMjIyMiA0NS43ODg0QzIxLjIyMjIgNDQuMDEwMiAxOS43NzUgNDIuNTc2OSAxOCA0Mi41NzY5QzE2LjIyNSA0Mi41NzY5IDE0Ljc3NzggNDQuMDEwMiAxNC43Nzc4IDQ1Ljc4ODRDMTQuNzc3OCA0Ny41NjY3IDE2LjIyNSA0OSAxOCA0OVoiIGZpbGw9IiM2QjcyODAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjguMTg1OCAzMC41NjgyTDI4LjE4NjQgMzAuNTY3OEMzMi4zMTMyIDI3LjU4IDM1IDIyLjgwOTMgMzUgMTcuNDIxQzM1IDguMzE3NTEgMjcuMzUzOCAxIDE4IDFDOC42NDYyMiAxIDEgOC4zMTc1MSAxIDE3LjQyMUMxIDIyLjgwOTUgMy42ODY0MiAyNy41ODExIDcuODEzNTkgMzAuNTY4OUw3LjgxNDE3IDMwLjU2OTRDOC44NjY1NiAzMS4zMzAxIDkuODU1MDUgMzEuOTM4NCAxMC43MjE3IDMyLjQ3MTdDMTAuNzYyMiAzMi40OTY2IDEwLjgwMjQgMzIuNTIxNCAxMC44NDI0IDMyLjU0NkMxMS43NTM0IDMzLjEwNjggMTIuNDk0MiAzMy41NyAxMy4wOTk3IDM0LjA2NkMxMy42OTE3IDM0LjU1MDggMTQuMTE2NiAzNS4wMzgxIDE0LjQwMjMgMzUuNjIwMUMxNC42ODc5IDM2LjIwMTkgMTQuODY2NyAzNi45NDQgMTQuODY2NyAzNy45ODIzQzE0Ljg2NjcgMzkuNzA0NiAxNi4zMDQ2IDQxLjAzODUgMTggNDEuMDM4NUMxOS42OTU0IDQxLjAzODUgMjEuMTMzMyAzOS43MDQ2IDIxLjEzMzMgMzcuOTgyM0MyMS4xMzMzIDM2Ljk0NCAyMS4zMTIxIDM2LjIwMTggMjEuNTk3NyAzNS42MTk5QzIxLjg4MzUgMzUuMDM3NyAyMi4zMDg0IDM0LjU1MDMgMjIuOTAwNCAzNC4wNjUzQzIzLjUwNTkgMzMuNTY5MyAyNC4yNDY3IDMzLjEwNTkgMjUuMTU3NyAzMi41NDVDMjUuMTk3OSAzMi41MjAyIDI1LjIzODUgMzIuNDk1MiAyNS4yNzkzIDMyLjQ3MDFDMjYuMTQ1NyAzMS45MzY4IDI3LjEzMzkgMzEuMzI4NyAyOC4xODU4IDMwLjU2ODJaIiBmaWxsPSIjNkI3MjgwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGVsbGlwc2UgY3g9IjE4IiBjeT0iMTcuOTIzMSIgcng9IjcuMTExMTEiIHJ5PSI3LjA3NjkyIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+				},
+				"shapes": [],
+				"document": {
+					"id": "d346722f-0034-4b8a-8873-a1f22c1bada8",
+					"src": "https://288120.selcdn.ru/platform-s3/plans/a050e162-d6cf-49c3-b33d-1e5be2d9826a/sheet/1/manifest.json",
+					"name": "Чертеж 2"
+				}
+			},
+			"dateTime": 1661933412000,
+			"stopWork": "no",
+			"typeOfWork": [
+				"f6d4d3a5-79a5-47e8-b402-98d73eed4235"
+			],
+			"criticality": "critical",
+			"disturbedPoint": [
+				"3ca4a0d5-2308-4fab-8dde-31e88df590fe"
+			],
+			"remedialAction": "устранить",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"exitTime": 1661243551750,
+		"dateCheck": {
+			"oldDate": 1661933412000,
+			"dateCount": 2
+		},
+		"issueStatus": [
+			"closed"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"close": [
+				1
+			],
+			"whatEliminate": "сделал",
+			"executorStatus": "issued",
+			"responsibleStatus": "issued",
+			"eliminationConfirmation": "issued"
+		},
+		"numberObject": {
+			"number": 6
+		},
+		"executorCheck": "6239bd3deef71301bcc56ab2",
+		"responsibleCheck": "6239bd3deef71301bcc56ab2",
+		"attachmentsAndComment": {
+			"comment": "описание",
+			"attachments": [
+				"63048f2a005b6d40866bfac3"
+			]
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_63048ad300295140900aa9ed": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_63048ad300295140900aa9ed": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661243105555,
+	"updatedDate": 1661243553209,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

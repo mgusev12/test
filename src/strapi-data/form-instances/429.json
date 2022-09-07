@@ -1,0 +1,78 @@
+{
+	"id": "63037af631886340ab1209ef",
+	"formId": "62a1f67e98497201a5000f1c",
+	"data": {
+		"info": {
+			"mtp": [
+				{
+					"id": "60fb5c39-45e6-4d28-996b-0af3b43d5350",
+					"name": "Брус 1-лиственница-100х100х6000 ГОСТ 8486-86",
+					"units_id": "2c5a6237-73b1-48e8-a919-c96fa08d652b"
+				}
+			],
+			"area": [
+				"246d86dd-d078-4e4b-9f04-fbd636b72849"
+			],
+			"count": 1,
+			"units": [
+				"2c5a6237-73b1-48e8-a919-c96fa08d652b"
+			],
+			"supDocs": [
+				"63037b2d313dc8408d53ea00"
+			],
+			"dateTime": 1661172470576,
+			"organization": [
+				"48e3d6e7-592f-4bf6-b104-1ac5a6f91a33"
+			]
+		},
+		"crCheck": "1",
+		"engineer": {
+			"user": [
+				"628b7c8217562056fee363c0"
+			],
+			"check": "628b7c8217562056fee363c0"
+		},
+		"responsible": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2",
+			"selectOne": "ready"
+		},
+		"numberObject": {
+			"number": "55555"
+		},
+		"inControlStatus": [
+			"review"
+		]
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2",
+		"628b7c8217562056fee363c0"
+	],
+	"relationsData": {
+		"62eb8c09cb0eeb1d34ca79b3_63037af631886340ab1209ef": {
+			"ASSIGNED_TO": true
+		},
+		"628b7c8217562056fee363c0_63037af631886340ab1209ef": {
+			"ASSIGNED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_63037af631886340ab1209ef": {
+			"ASSIGNED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63037af631886340ab1209ef": {
+			"RELATED_TO": true
+		},
+		"623b0cd717562056fee362e8_63037af631886340ab1209ef": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1661172647602,
+	"updatedDate": 1661344284002,
+	"assignedTo": "623b0cd717562056fee362e8",
+	"parent": null
+}

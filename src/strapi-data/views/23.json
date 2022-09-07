@@ -1,0 +1,32 @@
+{
+	"id": "62f0cdd32e0e9a0123000973",
+	"title": "Виды работ для замечаний/приёмки работ",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_type_of_work",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Lightning\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-08T08:48:26.958Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659948499044,
+	"updatedDate": 1659948869064,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

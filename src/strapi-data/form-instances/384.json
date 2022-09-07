@@ -1,0 +1,110 @@
+{
+	"id": "62f2494000d6c640a55481f4",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"82fd4bc3-3e6c-4603-af2a-0570d291a514"
+			],
+			"cafm": {
+				"pin": {
+					"h": 42,
+					"w": 28,
+					"id": "62f24e280068b640a52ef5e8",
+					"name": "anno-image",
+					"angle": 0,
+					"image": {},
+					"bounds": {
+						"left-top": {
+							"x": 227.0810546875,
+							"y": 146.29730224609375
+						},
+						"right-bottom": {
+							"x": 255.0810546875,
+							"y": 188.29730224609375
+						}
+					},
+					"points": [
+						{
+							"x": 227.0810546875,
+							"y": 146.29730224609375
+						}
+					],
+					"styles": {
+						"fillStyle": "rgb(255,0,0)",
+						"lineWidth": 2,
+						"strokeStyle": "rgb(255,0,0)"
+					},
+					"imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAuCAYAAABJcBuEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQnSURBVHgBxVg9TBRBFH57eP4AJmdiYiWe2GAhgliICeFI/GkhlpggBVJYKJhoMCZCNBpMVCxMjBZQaGdyUGMCSEGjCcFCGuHAymjCRYGA/Kzvm5s55o7d2d3LHXzJY4bd2/m+eTvvzZu1yCds245w08hWz1bFFmWLyNtJtgTbJNsY26BlWUnKB5g4yvaCbcEOhn486zW+ZSDG7G6ydatrG9NTtPZ5gjbnZ2hj/jvZy0upQYpLqOjYCQodLafw2VoqqqjUh+pmb/QEEiCVxynlalobH6bV+Hva/P2T/CB0+Ajta2qmcN1FdSnB1sBCEp4CJPkIWxSEK2+e0zrPPBdASMm9XrK4dRNhuZKzi5ce3027OVfg9RR3PeVXVO4oIlvAbD7JXURMsoBqdS+kkT8g6fblvod5Ixdj81jLT+6QnVpDVczVnRYnyaPcYPa0dP8Gr/AZKgSKTlZSSVcvusgRx5Er9sh7mL1Y7X7I91ScohCHXVGZcKmIjrXxj55RsvFtSnBwdCDEbxFCFDeQZLiJLHZeMw6Cd7m/7TaFa2od7/sJ12wvhJgc6TWCJGN6ECFV+uiVKzmAuC9G2LFQN8ALMqzhhSoswphQ/2WCTEBikfFsBITCSyZAhEQjBJxGb3NuxjioltU8AS9lpeMMrE9/Vd16CBDp1uT+cN0FCgoZ846wf6W5IhAQ8RIQ8uH6bQLK3AVoXNEQ7TIgQBQOxpU7FzwxeYWzRDItwOTmjR/BBSAxuQrY4kpAwJgQYFg0IoN5hGkm+bA5GXEWlZiDANRxnF4ryYSVt8/UZmIEiJENTQifOae6gxAwIATUnDeuA+xo2KIxOzess5ewmXlFFLgkRtVegCIkthp/56leDYLcoNYNFinqRD+VExLagbbOFLllNSgBMW5GMMvFzpa81gLZwrUSDZXRqMgD6AhF/Ar2NbdToaDtJ4OSk/RE1MqW3Msuwg8LQS73E4R9h7qeFiALxY7Uj6/mVQTGwpgSHXpRmpGK+cYANz35FLGfX6lG3iM5tjidHpJFoyjTRJHK4ef3UKIg6oLrnXp+wcz7sn9nOpphm8bpKIr//YYoAM/tvdyk8kqCrVUtOt8CpIgopc6GLfjfyxsOs35JqbOh60nZKEATEuOmn+S5AdkuO1c4HMNcZ53xHPmAHKiBbVIdPLOhxTj2lmo/5L4FSBEJbprQD9dd2nZfy+9NQT5OBKqIpIgEFpdeP6CvFpzTETxvAjLE6DunVuFQQOQiYAh/sGeomWuJZpIKDfnNaNbhm9Csn29C+RIRcxAQo52A9IDTF7OFHfEAk8TB9u/TsP2n/Yr9t6NF9CVGAg7nLxNmCbDR6kd5LMSDrz+gm+QwPBRkvFyiQISavbyYvmAVl6puhAIiFwEi1DLDMJ2ah6jQ2PVFqImIa8QjuZL/B9c8fA/SeW+eAAAAAElFTkSuQmCC"
+				},
+				"shapes": [],
+				"document": {
+					"id": "d346722f-0034-4b8a-8873-a1f22c1bada8",
+					"src": "https://288120.selcdn.ru/platform-s3/plans/a050e162-d6cf-49c3-b33d-1e5be2d9826a/sheet/1/manifest.json",
+					"name": "Чертеж 2"
+				}
+			},
+			"dateTime": 1660046868998,
+			"stopWork": "no",
+			"typeOfWork": [
+				"d652684d-a167-48d4-87d0-b861efd6f626"
+			],
+			"criticality": "notCritical",
+			"disturbedPoint": [
+				"f722d0c6-2150-4a85-a8bc-7c49e642adea"
+			],
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"exitTime": 1660047501037,
+		"dateCheck": {
+			"oldDate": 1660046868998,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"closed"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"close": [
+				1
+			],
+			"whatEliminate": "qweqwe",
+			"executorStatus": "issued",
+			"responsibleStatus": "issued",
+			"eliminationConfirmation": "issued"
+		},
+		"numberObject": {
+			"number": "1231"
+		},
+		"executorCheck": "6239bd3deef71301bcc56ab2",
+		"responsibleCheck": "6239bd3deef71301bcc56ab2"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_62f2494000d6c640a55481f4": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f2494000d6c640a55481f4": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1660045670718,
+	"updatedDate": 1660047501120,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

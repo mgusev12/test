@@ -1,0 +1,40 @@
+{
+	"id": "62d7f8d42e0e9a01230000b9",
+	"templateName": "ОтчетИнженеры",
+	"SQL": "[{\"title\": \"task\",\"sqlRequest\": \"{many}select u.name as resp, st.req, st.cl_req, st.iss, st.cl_iss, st.tri, st.in_time, st.in_week, st.in_month, st.more_month from (select resp, count(*) filter (where form_name = 'request' and status = any(array['accepted','notAccepted','confirmed'])) as req, count(*) filter (where form_name = 'request' and status = any(array['accepted','notAccepted'])) as cl_req, count(*) filter (where form_name = 'issue') as iss, count(*) filter (where form_name = 'issue' and status = 'closed') as cl_iss, count(*) filter (where form_name = 'trial') as tri, count(*) filter (where issue_exit_time is not null and due_date is not null and due_date >= issue_exit_time) as in_time, count(*) filter (where due_date is not null and ((issue_exit_time is not null and (issue_exit_time > due_date) and (issue_exit_time - '1 week'::interval) <= due_date) or ((issue_exit_time is null and (now()::date -'1 week'::interval) <= due_date) AND now()::date > due_date ))) as in_week, count(*) filter (where due_date is not null and ((issue_exit_time is not null and ((issue_exit_time - '1 month'::interval) <= due_date and (issue_exit_time - '1 week'::interval) > due_date)) or ((issue_exit_time is NULL AND (now()::date -'1 week'::interval) > due_date and (now()::date -'1 month'::interval) <= due_date)))) as in_month, count(*) filter (where due_date is not null and ((issue_exit_time is not null and (issue_exit_time - '1 month'::interval) > due_date) or ((issue_exit_time is null and (now()::date -'1 month'::interval) > due_date) ))) as more_month from (select case when \\\"formId\\\" = '6260fd7098497201a5000013' then ((data-> 'customerRepresentative') -> 'user')->> 0 when \\\"formId\\\" = '623b0f296c5347019d00000c' then ((data -> 'members') -> 'responsible')->> 0 when \\\"formId\\\" = '6260fd3f98497201a500000f' then ((data -> 'members') -> 'applicant')->> 0 else null end as resp, case when \\\"formId\\\" = '6260fd7098497201a5000013' then (data-> 'requestStatus')->> 0 when \\\"formId\\\" = '623b0f296c5347019d00000c' then (data-> 'issueStatus')->> 0 when \\\"formId\\\" = '6260fd3f98497201a500000f' then (data-> 'issueStatus')->> 0 else null end as status, case when \\\"formId\\\" = '623b0f296c5347019d00000c' and data?'exitTime' then to_timestamp(to_number((data ->> 'exitTime'),'9999999999'))::date else null end as issue_exit_time, case when \\\"formId\\\" = '6260fd7098497201a5000013' then 'request' when \\\"formId\\\" = '623b0f296c5347019d00000c' then 'issue' when \\\"formId\\\" = '6260fd3f98497201a500000f' then 'trial' else null end as form_name, case when \\\"formId\\\" = '623b0f296c5347019d00000c' AND ((DATA -> 'info') ->> 'dateTime') != '0' then to_timestamp(to_number(((data-> 'info')->> 'dateTime'),'9999999999'))::date else null end as due_date from form_instances where \\\"isArchived\\\" = false) sub where resp is not null group by resp) st left join \\\"user\\\" u on st.resp = u.id order by u.name\"}]",
+	"metadata": null,
+	"fileTitle": "Отчет по инженерам №{reportNumber} от {reportDate}",
+	"formId": "62c56c222e0e9a0123000008",
+	"filenameExtension": "xlsx",
+	"published_at": "2022-07-20T12:45:10.186Z",
+	"locationFilter": "^view.*",
+	"template": {
+		"id": 53,
+		"uuid": "63074fb0a390a201250005bb",
+		"name": "Отчет_о_работе_инженера_СК_шаблон (4).xlsx",
+		"alternativeText": "",
+		"caption": "",
+		"width": null,
+		"height": null,
+		"formats": null,
+		"hash": "Otchet_o_rabote_inzhenera_SK_shablon_4_743309235e",
+		"ext": ".xlsx",
+		"mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+		"size": 16.18,
+		"url": "/selectel?filePath=development/Otchet_o_rabote_inzhenera_SK_shablon_4_743309235e.xlsx",
+		"previewUrl": null,
+		"provider": "selectel",
+		"provider_metadata": null,
+		"created_at": "2022-08-25T10:32:16.493Z",
+		"updated_at": "2022-08-25T10:32:16.511Z"
+	},
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1658321108084,
+	"updatedDate": 1661432685050,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

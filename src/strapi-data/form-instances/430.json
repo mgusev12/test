@@ -1,0 +1,95 @@
+{
+	"id": "63037d540033c6408189ddc5",
+	"formId": "6260fd7098497201a5000013",
+	"data": {
+		"result": {
+			"close": [
+				1
+			],
+			"selectOne": "rejected",
+			"rejectReason": [
+				"fe03b09b-0055-4511-898a-15814e16e2d4"
+			]
+		},
+		"crCheck": "1",
+		"areaObject": {
+			"area": [
+				"72985d1e-9c4a-498e-b81c-4ec353a72cc2"
+			]
+		},
+		"selectTest": {
+			"test": [
+				{
+					"id": "62ff7073000d1e40aba889f4"
+				}
+			]
+		},
+		"numberObject": {
+			"number": "2208"
+		},
+		"requestStatus": [
+			"notAccepted"
+		],
+		"subcontractor": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2",
+			"selectOne": "ready"
+		},
+		"dateTimeDuration": {
+			"dateTime": 1661864276000,
+			"duration": [
+				"6dc6a16f-f518-4671-a27c-96745944557e"
+			]
+		},
+		"actAndTypeOfWorkObject": {
+			"act": "99",
+			"rdCode": [
+				"746b97f8-2ef4-4b6d-8a79-94162423e460"
+			],
+			"typeOfWork": [
+				"f6d4d3a5-79a5-47e8-b402-98d73eed4235"
+			],
+			"rdAttachments": [
+				"63037d810092b1408e20a02b"
+			]
+		},
+		"customerRepresentative": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2",
+			"selectOne": "accept",
+			"otherReason": "просьба другое время обозначить",
+			"rejectReason": [
+				"e41d020b-af12-448d-9a4e-c0a5e5161651"
+			]
+		},
+		"representativeDesignerSupervisor": {
+			"check": "representativeDesignerSupervisor"
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_63037d540033c6408189ddc5": {
+			"ASSIGNED_TO": true
+		},
+		"6260fd7098497201a5000013_63037d540033c6408189ddc5": {
+			"RELATED_TO": true
+		},
+		"623b0cd717562056fee362e8_63037d540033c6408189ddc5": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1661173135388,
+	"updatedDate": 1661244809018,
+	"assignedTo": "623b0cd717562056fee362e8",
+	"parent": null
+}

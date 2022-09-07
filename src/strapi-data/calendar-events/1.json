@@ -1,0 +1,24 @@
+{
+	"id": "623b18414549e840a11e9f68",
+	"comment": "ЗВ №1\nundefined",
+	"startTime": 1648471931000,
+	"endTime": 1648473731000,
+	"createdDate": 1648040001128,
+	"relationsData": {
+		"623b0cd717562056fee362e8_623b18414549e840a11e9f68": {
+			"OWNER": true
+		},
+		"623b17fa45250740b3d55069_623b18414549e840a11e9f68": {
+			"RELATED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_623b18414549e840a11e9f68": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"isArchived": false,
+	"owner": "623b0cd717562056fee362e8",
+	"published_at": "2022-03-23T12:53:21.122Z",
+	"updatedDate": 1648040140745,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

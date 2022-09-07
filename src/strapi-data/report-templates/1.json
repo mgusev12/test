@@ -1,0 +1,40 @@
+{
+	"id": "62c53fc298497201a5001543",
+	"templateName": "Excel",
+	"SQL": "[{\"title\": \"tasks\", \"sqlRequest\": \"{many}SELECT ROW_NUMBER () OVER () as num,* FROM(SELECT f.create_date, a.name as area_object, f.status, t.name as type_of_work, f.comment, f.stop_work, f.criticality, f.contravention_object, d.name as disturbed_point, f.due_date, f.eliminated, f.exit_time, f.deviation, u.name AS executor_name, u.organization AS executor_org, s.name AS elimination_responsible_name,r.name AS responsible_name FROM (SELECT to_char(created_at, 'DD.MM.YYYY') as create_date, (info -> 'area') ->> 0 as area_object, (members -> 'responsible') ->> 0 as responsible, (members -> 'eliminationResponsible') ->> 0 as elimination_responsible, (members -> 'executor') ->> 0 as executor, case when state = 'draft' then 'Черновик' when state = 'opened' then 'Открыто' when state = 'eliminated' then 'Устранено' when state = 'closed' then 'Закрыто' end as status, (info -> 'typeOfWork') ->> 0 AS type_of_work, (attachments_comment -> 'comment') ->> 0 AS comment, case when (info -> 'stopWork') ->> 0 = 'no' then 'Нет' else 'Да' end as stop_work, case when (info -> 'criticality') ->> 0 = 'notCritical' then 'Не критично' else 'Критично' end as criticality, case when (info -> 'contraventionObject') ->> 0 = 'work' then 'Работы' else 'МТР' end contravention_object, (info -> 'disturbedPoint') ->> 0 as disturbed_point, to_char(to_timestamp((substring(((info -> 'dateTime') ->> 0),1,10)::int)),'DD.MM.YYYY') as due_date, (info -> 'remedialAction') ->> 0 as remedial_action,CASE WHEN state = 'eliminated' THEN 'Устранено' ELSE 'Не устранено' END AS eliminated, case when exit_time is not null THEN to_char(to_timestamp((substring(((exit_time::jsonb) ->> 0),1,10)::int)),'DD.MM.YYYY') else '' end as exit_time,CASE WHEN exit_time IS NOT NULL AND (info -> 'dateTime')::numeric !=0 THEN to_timestamp((substring(((exit_time::jsonb) ->> 0),1,10)::int))::date -to_timestamp((substring(((info -> 'dateTime') ->> 0),1,10)::int))::date END AS deviation FROM (SELECT created_at, CASE WHEN data ? 'info' THEN data -> 'info' END AS info, CASE WHEN data ? 'members' THEN data -> 'members' END AS members, (data -> 'issueStatus') ->> 0 as state, CASE WHEN data ? 'attachmentsAndComment' = TRUE THEN (data -> 'attachmentsAndComment') ELSE '[]' END AS attachments_comment, CASE WHEN data ? 'exitTime' THEN (data ->> 'exitTime') ELSE NULL END AS exit_time FROM form_instances WHERE \\\"formId\\\" = '623b0f296c5347019d00000c' AND \\\"isArchived\\\" = false <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if> <#if status??> AND data @> ANY(ARRAY[<#list status as i> '{\\\"issueStatus\\\": [\\\"${i}\\\"]}'<#if !i?is_last>, </#if></#list>]::jsonb[])</#if>)json_extract) f LEFT JOIN public.user u ON f.executor = u.id LEFT JOIN public.user s ON f.elimination_responsible = s.id LEFT JOIN public.user r ON f.responsible = r.id LEFT JOIN polus_area a ON f.area_object = a.id::text LEFT JOIN polus_type_of_work t ON f.type_of_work = t.id::text LEFT JOIN disturbed_point d ON f.disturbed_point = d.id::text)merged\"}]",
+	"metadata": null,
+	"fileTitle": "Отчет по заявкам от {reportDate}",
+	"formId": "62c56c222e0e9a0123000008",
+	"filenameExtension": "xlsx",
+	"published_at": "2022-07-08T11:06:12.104Z",
+	"locationFilter": "^view.*",
+	"template": {
+		"id": 52,
+		"uuid": "6306392aa390a2012500059e",
+		"name": "Тест_шаблон.xlsx",
+		"alternativeText": "",
+		"caption": "",
+		"width": null,
+		"height": null,
+		"formats": null,
+		"hash": "Test_shablon_da7313d18d",
+		"ext": ".xlsx",
+		"mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+		"size": 17.17,
+		"url": "/selectel?filePath=development/Test_shablon_da7313d18d.xlsx",
+		"previewUrl": null,
+		"provider": "selectel",
+		"provider_metadata": null,
+		"created_at": "2022-08-24T14:43:54.375Z",
+		"updated_at": "2022-08-24T14:43:54.394Z"
+	},
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1657094082515,
+	"updatedDate": 1661500495814,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

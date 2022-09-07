@@ -1,0 +1,47 @@
+{
+	"id": "629dcdda98497201a5000c61",
+	"title": "Виды работ",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_type_of_work",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${name}",
+				"operator": "contains",
+				"property": "name"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-06-06T09:50:28.442Z",
+	"filters": [
+		{
+			"icon": "CompleteInput",
+			"type": "text",
+			"title": "По виду работ",
+			"params": {
+				"name": ""
+			},
+			"placeholder": "Введите вид работы"
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1654509018623,
+	"updatedDate": 1660568211445,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

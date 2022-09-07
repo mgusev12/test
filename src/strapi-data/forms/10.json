@@ -1,0 +1,70 @@
+{
+	"id": "62f284762e0e9a0123000ac3",
+	"scheme": {
+		"order": [
+			"testViewDisplay"
+		],
+		"properties": {
+			"number": {
+				"type": "number",
+				"hidden": false,
+				"readOnly": true
+			},
+			"testViewDisplay": {
+				"type": "viewDisplay",
+				"title": "Номер замечания",
+				"fields": [
+					"id",
+					"title"
+				],
+				"viewId": "62f284f92e0e9a0123000ac7",
+				"variables": {
+					"number": ""
+				}
+			}
+		}
+	},
+	"title": "Тест",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-08-09T15:59:55.549Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"62f284762e0e9a0123000ac3_62fcb55a5326ac40914bc938": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62fcb2ba535c374093d388ad": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f33e0a009e55409dc415f7": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f28ea90093e740875f2a98": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f28ded0092cc4089328da9": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f28d880095a740a097c354": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f28b7900215c409516fc21": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f2867900a024409dd5c0a4": {
+			"RELATED_TO": true
+		},
+		"62f284762e0e9a0123000ac3_62f28539003e2c409283beb8": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1660060790632,
+	"updatedDate": 1660728999702,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

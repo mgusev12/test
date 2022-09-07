@@ -1,0 +1,32 @@
+{
+	"id": "62e8e30f2e0e9a012300044f",
+	"title": "disturbed_point",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "disturbed_point",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-02T08:41:06.508Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659429647665,
+	"updatedDate": 1659429666531,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

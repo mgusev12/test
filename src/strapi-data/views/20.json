@@ -1,0 +1,32 @@
+{
+	"id": "62f0bb1f2e0e9a012300095f",
+	"title": "Статусы для входного контроля",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_incontrol_status",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    const result = {};\n\n    if (id === \"draft\") {\n        let draft = \"grey[100]\";\n        result.icon = {\n          value: \"Status0\",\n          color: draft\n        };\n      } else if (id === \"review\") {\n        let review = \"states.completed\";\n        result.icon = {\n          value: \"Status25\",\n          color: review\n        };\n      } else if (id === \"confirmed\") {\n        let confirmed = \"info.main\";\n        result.icon = {\n          value: \"Status50\",\n          color: confirmed\n        };\n      } else if (id === \"rejected\") {\n        let rejected = \"error.main\";\n        result.icon = {\n          value: \"Status50\",\n          color: rejected\n        };\n      } else if (id === \"accepted\") {\n        let accepted = \"success.main\";\n        result.icon = {\n          value: \"Status100\",\n          color: accepted\n        };\n      } else if (id === \"notAccepted\") {\n        let notAccepted = \"grey[100]\";\n        result.icon = {\n          value: \"Close\",\n          color: notAccepted\n        };\n      }\n  \n      \n\n    return {\n        ...result,\n        id,\n        title: {\n            value: name,\n            placeholder: \"Статус входного контроля\",\n        },\n    };\n}\n\n",
+	"published_at": "2022-08-08T07:28:33.595Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659943711573,
+	"updatedDate": 1659943713614,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

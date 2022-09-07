@@ -1,0 +1,66 @@
+{
+	"id": "6303489d00273140981bd3ac",
+	"formId": "62a1f67e98497201a5000f1c",
+	"data": {
+		"info": {
+			"mtp": [
+				{
+					"id": "f077f64e-fa44-45e5-880b-6d7e88926bf9",
+					"name": "Брус обрезной 1-лиственница-180х150 L=6000 мм ГОСТ 8486-86",
+					"units_id": "2c5a6237-73b1-48e8-a919-c96fa08d652b"
+				}
+			],
+			"count": 2,
+			"units": [
+				"2c5a6237-73b1-48e8-a919-c96fa08d652b"
+			],
+			"dateTime": 0
+		},
+		"crCheck": "1",
+		"engineer": {
+			"user": [
+				"62eb8c09cb0eeb1d34ca79b3"
+			],
+			"check": "62eb8c09cb0eeb1d34ca79b3"
+		},
+		"responsible": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2",
+			"selectOne": "notReady"
+		},
+		"numberObject": {
+			"number": "111"
+		},
+		"inControlStatus": [
+			"draft"
+		]
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2",
+		"62eb8c09cb0eeb1d34ca79b3"
+	],
+	"relationsData": {
+		"62eb8c09cb0eeb1d34ca79b3_6303489d00273140981bd3ac": {
+			"ASSIGNED_TO": true
+		},
+		"628b7c8217562056fee363c0_6303489d00273140981bd3ac": {
+			"ASSIGNED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_6303489d00273140981bd3ac": {
+			"ASSIGNED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_6303489d00273140981bd3ac": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661159588582,
+	"updatedDate": 1661174029567,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

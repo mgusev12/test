@@ -1,0 +1,43 @@
+{
+	"id": "62c56c222e0e9a0123000008",
+	"scheme": {
+		"order": [
+			"name",
+			"number",
+			"date"
+		],
+		"title": "JSONSchema Form",
+		"properties": {
+			"date": {
+				"type": "date",
+				"title": "Дата",
+				"description": "Дата в документе"
+			},
+			"name": {
+				"type": "text",
+				"title": "Название документа",
+				"description": "Введите название документа"
+			},
+			"number": {
+				"type": "text",
+				"title": "Номер документа",
+				"description": "Введите номер документа"
+			}
+		}
+	},
+	"title": "Схема для отчетов",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-07-06T11:04:05.665Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1657105442090,
+	"updatedDate": 1657105445690,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

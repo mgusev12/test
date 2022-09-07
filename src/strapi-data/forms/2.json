@@ -1,0 +1,201 @@
+{
+	"id": "623b0ed76c5347019d000008",
+	"scheme": {
+		"order": [
+			"typeOfWork"
+		],
+		"required": [
+			"name",
+			"checklistSimple",
+			"typeOfWork",
+			"selectUser",
+			"selectOne",
+			"date",
+			"selectAny",
+			"address",
+			"amount",
+			"documents",
+			"objectType",
+			"dateTime",
+			"description",
+			"email"
+		],
+		"properties": {
+			"date": {
+				"type": "date",
+				"title": "Дата проверки",
+				"hidden": false,
+				"description": "Дата начала"
+			},
+			"name": {
+				"type": "text",
+				"title": "Название",
+				"hidden": false,
+				"minLength": 3,
+				"description": "Название объекта"
+			},
+			"email": {
+				"type": "email",
+				"title": "E-mail ответственного лица",
+				"hidden": false
+			},
+			"forge": {
+				"type": "forge",
+				"title": "Forge",
+				"hidden": false
+			},
+			"amount": {
+				"type": "number",
+				"title": "Количество",
+				"hidden": false,
+				"description": "Количество"
+			},
+			"address": {
+				"type": "text",
+				"title": "Адрес",
+				"hidden": false,
+				"description": "Адрес объекта"
+			},
+			"dateTime": {
+				"type": "datetime",
+				"title": "Дата и время",
+				"hidden": false,
+				"description": "Дата и время начала"
+			},
+			"documents": {
+				"type": "attachments",
+				"title": "Документы",
+				"hidden": false
+			},
+			"selectAny": {
+				"type": "checkboxes",
+				"items": {
+					"enum": [
+						0,
+						1,
+						2,
+						3
+					],
+					"type": "number",
+					"enumNames": [
+						"Первый этаж",
+						"Второй этаж",
+						"Третий этаж",
+						"Пятый этаж"
+					]
+				},
+				"title": "Проверить:",
+				"hidden": false,
+				"minItems": 2
+			},
+			"selectOne": {
+				"enum": [
+					"one",
+					"two",
+					"three"
+				],
+				"type": "radio",
+				"title": "Проверить:",
+				"hidden": false,
+				"enumNames": [
+					"Стяжки",
+					"Стены",
+					"Потолки",
+					"Дверные проемы"
+				]
+			},
+			"objectType": {
+				"enum": [
+					"Жилой комплекс",
+					"Спортивные сооружения",
+					"Служебные помещения"
+				],
+				"type": "select",
+				"title": "Тип объекта",
+				"hidden": false,
+				"multiple": true
+			},
+			"selectUser": {
+				"type": "user",
+				"title": "Сотрудник"
+			},
+			"typeOfWork": {
+				"type": "dictionary",
+				"title": "Вид работ",
+				"hidden": false,
+				"dictionaryName": "type_of_work"
+			},
+			"description": {
+				"type": "textarea",
+				"title": "Описание",
+				"hidden": false,
+				"description": "Краткое описание"
+			},
+			"checklistSimple": {
+				"type": "checklist",
+				"title": "Чеклист",
+				"groups": [
+					{
+						"id": "documentation",
+						"name": "Сопроводительная документация",
+						"items": [
+							{
+								"id": "commercial_documentation",
+								"name": "Наличие коммерческой документации (универсальный передаточный документ, товарная накладная, счет-фактура)"
+							},
+							{
+								"id": "quality_documentation",
+								"name": "Наличие документов о качестве (сертификат соответствия, паспорт/сертификат качества)"
+							}
+						]
+					},
+					{
+						"id": "packaging",
+						"name": "Упаковка",
+						"items": [
+							{
+								"id": "container",
+								"name": "В качестве тары используют следующие средства:                                 -металлические и пластиковые пакеты (поддоны, ящики); - деревянные и пластиковые ящики (поддоны, бруски)"
+							}
+						]
+					}
+				],
+				"variants": [
+					{
+						"id": "1",
+						"name": "Не соответствует",
+						"color": "error.main"
+					},
+					{
+						"id": "2",
+						"name": "Соответствует",
+						"color": "success.main"
+					}
+				]
+			},
+			"selectUserArray": {
+				"type": "array",
+				"items": {
+					"type": "user"
+				},
+				"title": "Сотрудники",
+				"hidden": false
+			}
+		}
+	},
+	"title": "All types of fields",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-08-02T13:39:05.413Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1648037591620,
+	"updatedDate": 1659447545444,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

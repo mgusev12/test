@@ -1,0 +1,37 @@
+{
+	"id": "62e7885c2e0e9a0123000405",
+	"title": "Чеклисты",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_checklist",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-01T08:01:35.813Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659340892957,
+	"updatedDate": 1659426817885,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

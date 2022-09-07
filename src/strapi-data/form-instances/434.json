@@ -1,0 +1,222 @@
+{
+	"id": "63048e6800865a409e0b2ae8",
+	"formId": "62a1f67e98497201a5000f1c",
+	"data": {
+		"info": {
+			"mtp": [
+				{
+					"id": "aaccb7ce-8fec-405e-90da-8bdff1ca83f9",
+					"name": "Балка двутавровая деревянная Tech, L=1500 мм (с заглушками) ТУ 5366-001-99187742-2007",
+					"units_id": "9f7026cd-d08d-44ca-9aa0-e0bfb7e4dfd3"
+				}
+			],
+			"area": [
+				"82fd4bc3-3e6c-4603-af2a-0570d291a514"
+			],
+			"count": 62,
+			"units": [
+				"9f7026cd-d08d-44ca-9aa0-e0bfb7e4dfd3"
+			],
+			"supDocs": [
+				"63048eb9005def40a3a0964a"
+			],
+			"dateTime": 1661429765000,
+			"organization": [
+				"48e3d6e7-592f-4bf6-b104-1ac5a6f91a33"
+			]
+		},
+		"result": {
+			"close": [
+				1
+			],
+			"selectOne": "accept"
+		},
+		"crCheck": "1",
+		"engineer": {
+			"user": [
+				"62eb8c09cb0eeb1d34ca79b3"
+			],
+			"check": "62eb8c09cb0eeb1d34ca79b3",
+			"selectOne": "accept",
+			"rejectReason": "111"
+		},
+		"responsible": {
+			"user": [
+				"628b7c8217562056fee363c0"
+			],
+			"check": "628b7c8217562056fee363c0",
+			"selectOne": "ready"
+		},
+		"numberObject": {
+			"number": "ВКУ-1"
+		},
+		"checklistView": [
+			{
+				"id": "22f2972b-460b-405e-80f8-b9509f632637",
+				"name": "Оргстекло",
+				"groups": [
+					{
+						"id": "documentation",
+						"name": "Сопроводительная документация",
+						"items": [
+							{
+								"id": "commercial_documentation",
+								"name": "Наличие коммерческой документации исключить!"
+							}
+						]
+					},
+					{
+						"id": "packaging",
+						"name": "Упаковка",
+						"items": [
+							{
+								"id": "safety",
+								"name": "Упаковка должна обеспечивать сохранность изделий от механических повреждений и атмосферных осадков при транспортировании, погрузке, выгрузке и хранении.Изделия должны быть разделены прокладочными материалами, не содержащими царапающих включений и не повреждающими изделия."
+							}
+						]
+					},
+					{
+						"id": "marking",
+						"name": "Маркировка",
+						"items": [
+							{
+								"id": "tradename",
+								"name": "На каждое стекло должна быть нанесена четкая нестираемая маркировка, содержащая:  торговое название (при наличии) и товарный знак или наименование;"
+							},
+							{
+								"id": "customer_tradename",
+								"name": "Торговое название, товарный знак или наименование потребителя (при необходимости, по требованию потребителя);"
+							},
+							{
+								"id": "number",
+								"name": "Номер официального утверждения соответствия международным документам, присвоенный первоначальному изготовителю (при наличии);номинальной толщины; массы листа; даты изготовления; фамилии или штампа упаковщика или клейма ОТК;"
+							},
+							{
+								"id": "result",
+								"name": "Результаты испытаний или подтверждение о соотвествии технического органического стекла требованиям ГОСТ 17622-72."
+							},
+							{
+								"id": "transport_marking",
+								"name": "Транспортная маркировка - по ГОСТ 14192-96 с нанесением манипуляционного знака \"Осторожно, хрупкое!\"."
+							}
+						]
+					},
+					{
+						"id": "appearance",
+						"name": "Внешний вид",
+						"items": [
+							{
+								"id": "inclusions",
+								"name": "Посторонние включения в разбросанном виде;"
+							},
+							{
+								"id": "rough_scratches",
+								"name": "Царапины грубые;"
+							},
+							{
+								"id": "notrough_scratches",
+								"name": "Царапины негрубые в разбросаном виде;"
+							},
+							{
+								"id": "bubbles",
+								"name": "Внутренние пузырьки;"
+							},
+							{
+								"id": "dot",
+								"name": "Прозрачные точки в разбросаном виде;"
+							},
+							{
+								"id": "holes",
+								"name": "Лунки, свиль, волнистость, полосность, сыпь;"
+							},
+							{
+								"id": "prints",
+								"name": "Отпечатки от выщелачивания селикатного стекла, очаги;"
+							},
+							{
+								"id": "haze",
+								"name": "Формовая матовость; поверхностные наплывы, отпечатки трещин силикатного стекла;"
+							},
+							{
+								"id": "slips",
+								"name": "Отлипы внутри блока;"
+							},
+							{
+								"id": "chipped",
+								"name": "Щербины, зазубрины, сколы"
+							}
+						]
+					},
+					{
+						"id": "dimensions",
+						"name": "Размеры",
+						"items": [
+							{
+								"id": "matching_sizes",
+								"name": "Соответствие геометрических размеров МТР."
+							}
+						]
+					}
+				],
+				"variants": [
+					{
+						"id": "1",
+						"name": "Не соответствует",
+						"color": "error.main"
+					},
+					{
+						"id": "2",
+						"name": "Соответствует",
+						"color": "success.main"
+					}
+				]
+			}
+		],
+		"checklistObject": {
+			"appearance.dot": "1",
+			"marking.number": "1",
+			"marking.result": "2",
+			"appearance.haze": "2",
+			"appearance.holes": "2",
+			"appearance.slips": "1",
+			"packaging.safety": "2",
+			"appearance.prints": "1",
+			"marking.tradename": "1",
+			"appearance.bubbles": "2",
+			"appearance.chipped": "1",
+			"appearance.inclusions": "2",
+			"dimensions.matching_sizes": "2",
+			"marking.transport_marking": "1",
+			"appearance.rough_scratches": "1",
+			"marking.customer_tradename": "2",
+			"appearance.notrough_scratches": "1",
+			"documentation.commercial_documentation": "1"
+		},
+		"inControlStatus": [
+			"accepted"
+		]
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"628b7c8217562056fee363c0",
+		"62eb8c09cb0eeb1d34ca79b3"
+	],
+	"relationsData": {
+		"62eb8c09cb0eeb1d34ca79b3_63048e6800865a409e0b2ae8": {
+			"ASSIGNED_TO": true
+		},
+		"628b7c8217562056fee363c0_63048e6800865a409e0b2ae8": {
+			"ASSIGNED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63048e6800865a409e0b2ae8": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661243013702,
+	"updatedDate": 1661244190260,
+	"assignedTo": "628b7c8217562056fee363c0",
+	"parent": null
+}

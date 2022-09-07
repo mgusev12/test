@@ -1,0 +1,14 @@
+{
+	"id": "623b10c76c5347019d000019",
+	"title": "Schedule type",
+	"formId": "623b0f296c5347019d00000c",
+	"isArchived": false,
+	"directusCollectionName": "polus_issue_status",
+	"published_at": "2022-03-23T12:38:07.677Z",
+	"relationsData": [],
+	"createdDate": 1648038087556,
+	"updatedDate": 1650964161870,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

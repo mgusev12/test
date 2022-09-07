@@ -1,0 +1,89 @@
+{
+	"id": "6286320a98497201a50006f9",
+	"title": "Чертежи",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "623b0ef86c5347019d00000a",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			},
+			{
+				"value": "${cafm}",
+				"operator": "inObject",
+				"property": "data.cafm.document.id"
+			}
+		],
+		"pagination": {
+			"limit": 10,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "623b0ef86c5347019d00000a"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, title, createdDate, reviewers, data } = item;\n    const description = new Date(createdDate).toLocaleDateString(\"ru-Ru\");\n    return {\n        ...data.cafm,\n        id,\n        title: {\n            value: data.name,\n            placeholder: \"Отметка на чертеже\",\n        },\n    };\n}",
+	"published_at": "2022-05-19T12:03:24.931Z",
+	"filters": [
+		{
+			"icon": "CompleteInput",
+			"type": "text",
+			"title": "По названию",
+			"params": {
+				"name": ""
+			},
+			"inSidebar": false,
+			"placeholder": "Введите название"
+		},
+		{
+			"icon": "Calendar",
+			"type": "date",
+			"title": "По дате создания",
+			"params": {
+				"createDate": {
+					"end": "",
+					"start": ""
+				}
+			},
+			"inSidebar": false
+		},
+		{
+			"icon": "Project",
+			"type": "view",
+			"title": "По дереву чертежей",
+			"params": {
+				"cafm": ""
+			},
+			"viewId": "62e7c6832e0e9a012300040b",
+			"muliple": false,
+			"inSidebar": true
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1652961802237,
+	"updatedDate": 1659688569574,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

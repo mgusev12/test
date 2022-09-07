@@ -1,0 +1,141 @@
+{
+	"id": "62f24c9a00e42140b3f1df2f",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"fba96178-86c4-4875-bb4d-f771978848f9"
+			],
+			"cafm": {
+				"pin": {
+					"h": 42,
+					"w": 28,
+					"id": "62f24d1400b271408a03c436",
+					"name": "anno-image",
+					"angle": 0,
+					"image": {},
+					"bounds": {
+						"left-top": {
+							"x": 574.3333129882812,
+							"y": 482.3333435058594
+						},
+						"right-bottom": {
+							"x": 602.3333129882812,
+							"y": 524.3333435058594
+						}
+					},
+					"points": [
+						{
+							"x": 574.3333129882812,
+							"y": 482.3333435058594
+						}
+					],
+					"styles": {
+						"fillStyle": "rgb(255,0,0)",
+						"lineWidth": 2,
+						"strokeStyle": "rgb(255,0,0)"
+					},
+					"imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAuCAYAAABJcBuEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQnSURBVHgBxVg9TBRBFH57eP4AJmdiYiWe2GAhgliICeFI/GkhlpggBVJYKJhoMCZCNBpMVCxMjBZQaGdyUGMCSEGjCcFCGuHAymjCRYGA/Kzvm5s55o7d2d3LHXzJY4bd2/m+eTvvzZu1yCds245w08hWz1bFFmWLyNtJtgTbJNsY26BlWUnKB5g4yvaCbcEOhn486zW+ZSDG7G6ydatrG9NTtPZ5gjbnZ2hj/jvZy0upQYpLqOjYCQodLafw2VoqqqjUh+pmb/QEEiCVxynlalobH6bV+Hva/P2T/CB0+Ajta2qmcN1FdSnB1sBCEp4CJPkIWxSEK2+e0zrPPBdASMm9XrK4dRNhuZKzi5ce3027OVfg9RR3PeVXVO4oIlvAbD7JXURMsoBqdS+kkT8g6fblvod5Ixdj81jLT+6QnVpDVczVnRYnyaPcYPa0dP8Gr/AZKgSKTlZSSVcvusgRx5Er9sh7mL1Y7X7I91ScohCHXVGZcKmIjrXxj55RsvFtSnBwdCDEbxFCFDeQZLiJLHZeMw6Cd7m/7TaFa2od7/sJ12wvhJgc6TWCJGN6ECFV+uiVKzmAuC9G2LFQN8ALMqzhhSoswphQ/2WCTEBikfFsBITCSyZAhEQjBJxGb3NuxjioltU8AS9lpeMMrE9/Vd16CBDp1uT+cN0FCgoZ846wf6W5IhAQ8RIQ8uH6bQLK3AVoXNEQ7TIgQBQOxpU7FzwxeYWzRDItwOTmjR/BBSAxuQrY4kpAwJgQYFg0IoN5hGkm+bA5GXEWlZiDANRxnF4ryYSVt8/UZmIEiJENTQifOae6gxAwIATUnDeuA+xo2KIxOzess5ewmXlFFLgkRtVegCIkthp/56leDYLcoNYNFinqRD+VExLagbbOFLllNSgBMW5GMMvFzpa81gLZwrUSDZXRqMgD6AhF/Ar2NbdToaDtJ4OSk/RE1MqW3Msuwg8LQS73E4R9h7qeFiALxY7Uj6/mVQTGwpgSHXpRmpGK+cYANz35FLGfX6lG3iM5tjidHpJFoyjTRJHK4ef3UKIg6oLrnXp+wcz7sn9nOpphm8bpKIr//YYoAM/tvdyk8kqCrVUtOt8CpIgopc6GLfjfyxsOs35JqbOh60nZKEATEuOmn+S5AdkuO1c4HMNcZ53xHPmAHKiBbVIdPLOhxTj2lmo/5L4FSBEJbprQD9dd2nZfy+9NQT5OBKqIpIgEFpdeP6CvFpzTETxvAjLE6DunVuFQQOQiYAh/sGeomWuJZpIKDfnNaNbhm9Csn29C+RIRcxAQo52A9IDTF7OFHfEAk8TB9u/TsP2n/Yr9t6NF9CVGAg7nLxNmCbDR6kd5LMSDrz+gm+QwPBRkvFyiQISavbyYvmAVl6puhAIiFwEi1DLDMJ2ah6jQ2PVFqImIa8QjuZL/B9c8fA/SeW+eAAAAAElFTkSuQmCC"
+				},
+				"shapes": [],
+				"document": {
+					"id": "730a16bf-8acf-4a83-9a8d-f0a8a971f600",
+					"src": "https://288120.selcdn.ru/platform-s3/plans/51cbd897-d21b-4621-80da-4d05d732d880/sheet/1/manifest.json",
+					"name": "Чертеж 1"
+				}
+			},
+			"dateTime": 1660046556017,
+			"stopWork": "no",
+			"typeOfWork": [
+				"d652684d-a167-48d4-87d0-b861efd6f626"
+			],
+			"criticality": "notCritical",
+			"disturbedPoint": [
+				"c2c478c6-2f34-461a-a0e6-8b0946abd8cf",
+				"7363c705-5b57-4855-be42-aad21024d124",
+				"1f20b5f4-df0f-4990-8ecb-d2a5cce8b120",
+				"54a3079f-35fa-4caf-bf61-63b298b486e8"
+			],
+			"remedialAction": "меры",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"628b7c8217562056fee363c0"
+			],
+			"responsible": [
+				"62e8ed8dcb0eeb1d34ca7928"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 1660046556017,
+			"dateCount": 0
+		},
+		"selectTest": {
+			"test": [
+				{
+					"id": "62f237fe0078f4409586e370"
+				},
+				{
+					"id": "62eba29100d488409a6d9c5d"
+				},
+				{
+					"id": "62eb99b100e19d4088862bc0"
+				},
+				{
+					"id": "62eb914a00456940a6d097dd"
+				}
+			]
+		},
+		"issueStatus": [
+			"opened"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"executorStatus": "notIssued",
+			"responsibleStatus": "issued"
+		},
+		"numberObject": {
+			"number": "Проверка 201"
+		},
+		"executorCheck": "628b7c8217562056fee363c0",
+		"selectRequest": {
+			"request": [
+				{
+					"id": "62f23643003dd9409fcc568d"
+				}
+			]
+		},
+		"responsibleCheck": "62e8ed8dcb0eeb1d34ca7928",
+		"attachmentsAndComment": {
+			"comment": "Описуха",
+			"attachments": [
+				"62f24ca000de9540b876d987"
+			]
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"62e8ed8dcb0eeb1d34ca7928",
+		"628b7c8217562056fee363c0"
+	],
+	"relationsData": {
+		"62e8ed8dcb0eeb1d34ca7928_62f24c9a00e42140b3f1df2f": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f24c9a00e42140b3f1df2f": {
+			"RELATED_TO": true
+		},
+		"628b7c8217562056fee363c0_62f24c9a00e42140b3f1df2f": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1660046717252,
+	"updatedDate": 1660046876359,
+	"assignedTo": "628b7c8217562056fee363c0",
+	"parent": null
+}

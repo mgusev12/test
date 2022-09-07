@@ -1,0 +1,49 @@
+{
+	"id": "623b0ef86c5347019d00000a",
+	"scheme": {
+		"required": [
+			"cafm"
+		],
+		"properties": {
+			"cafm": {
+				"type": "cafm",
+				"title": "Чертеж",
+				"viewId": "62e7c6832e0e9a012300040b"
+			}
+		}
+	},
+	"title": "Form for Cafm",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-08-01T12:36:59.466Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"623b0ef86c5347019d00000a_62fa4e3100cae740be188b86": {
+			"RELATED_TO": true
+		},
+		"623b0ef86c5347019d00000a_62eccebc007c4f40a326d87d": {
+			"RELATED_TO": true
+		},
+		"623b0ef86c5347019d00000a_62ebca674d44c540a8f006eb": {
+			"RELATED_TO": true
+		},
+		"623b0ef86c5347019d00000a_62ebbbdc4dcbb540b61711d4": {
+			"RELATED_TO": true
+		},
+		"623b0ef86c5347019d00000a_62eba0fd00abcd408491815e": {
+			"RELATED_TO": true
+		},
+		"623b0ef86c5347019d00000a_62eb91f2000e6d408864642f": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1648037624388,
+	"updatedDate": 1659514846992,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

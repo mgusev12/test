@@ -1,0 +1,21 @@
+{
+	"id": "623d790900e1c540a7657e5c",
+	"comment": "Михеева ЗВ 01\nnull",
+	"startTime": 1648282226000,
+	"endTime": 1648283126000,
+	"createdDate": 1648195847396,
+	"relationsData": {
+		"623d72353e3f5d4095db4f50_623d790900e1c540a7657e5c": {
+			"RELATED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_623d790900e1c540a7657e5c": {
+			"OWNER": true
+		}
+	},
+	"isArchived": false,
+	"owner": "6239bd3deef71301bcc56ab2",
+	"published_at": "2022-03-25T08:10:47.386Z",
+	"updatedDate": 1648195847396,
+	"assignedTo": null,
+	"parent": null
+}

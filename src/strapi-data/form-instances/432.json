@@ -1,0 +1,68 @@
+{
+	"id": "6304868c0032f240afded282",
+	"formId": "6260fd3f98497201a500000f",
+	"data": {
+		"info": {
+			"testType": "geodetic"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"628b7c8217562056fee363c0"
+			],
+			"applicant": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"dateTime": {
+			"dateTimeEnd": 1661500173000,
+			"dateTimeStart": 1661413773000
+		},
+		"areaObject": {
+			"area": [
+				"246d86dd-d078-4e4b-9f04-fbd636b72849"
+			]
+		},
+		"checkStatus": {
+			"exitCheck": [
+				1
+			],
+			"trialResult": [
+				"6304879b00f10c4098fbc753"
+			],
+			"executorStatus": "accept",
+			"applicantStatus": "ready"
+		},
+		"issueStatus": [
+			"closed"
+		],
+		"numberObject": {
+			"number": "ИУ-1"
+		},
+		"executorCheck": "628b7c8217562056fee363c0",
+		"applicantCheck": "6239bd3deef71301bcc56ab2"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2",
+		"628b7c8217562056fee363c0"
+	],
+	"relationsData": {
+		"628b7c8217562056fee363c0_6304868c0032f240afded282": {
+			"ASSIGNED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_6304868c0032f240afded282": {
+			"ASSIGNED_TO": true
+		},
+		"6260fd3f98497201a500000f_6304868c0032f240afded282": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661241001063,
+	"updatedDate": 1661241264875,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

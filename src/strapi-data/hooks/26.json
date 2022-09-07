@@ -1,0 +1,13 @@
+{
+	"id": "62a9cca998497201a50010e8",
+	"title": "Polus_inControl_onCreate",
+	"hookType": "onCreate",
+	"function": "function onCreate(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n\n    response.data.responsible = {user:[user.id],selectOne: 'notReady', check: 'responsible'}\n    response.data.engineer = {user:[], check: 'engineer'}\n    response.data.info = {dateTime: 0, mtp: '',  organization: '', area:[], supDocs: []}\n    response.data.crCheck = \"1\"\n  \n    return response;\n}",
+	"form": "62a1f67e98497201a5000f1c",
+	"relationsData": [],
+	"createdDate": 1655295145975,
+	"updatedDate": 1660049112009,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

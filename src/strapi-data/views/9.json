@@ -1,0 +1,32 @@
+{
+	"id": "62a0f59498497201a5000de1",
+	"title": "Статусы для замечаний",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_iss_status",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    const result = {};\n\n    if (id === \"draft\") {\n        let draft = \"grey[100]\";\n        result.icon = {\n          value: \"Status0\",\n          color: draft\n        };\n      } else if (id === \"opened\") {\n        let opened = \"error.main\";\n        result.icon = {\n          value: \"Status25\",\n          color: opened\n        };\n      } else if (id === \"eliminated\") {\n        let eliminated = \"states.completed\";\n        result.icon = {\n          value: \"Status50\",\n          color: eliminated\n        };\n      } else if (id === \"closed\") {\n        let closed = \"success.main\";\n        result.icon = {\n          value: \"Status100\",\n          color: closed\n        };\n      }\n      \n\n    return {\n        ...result,\n        id,\n        title: {\n            value: name,\n            placeholder: \"Статус замечания\",\n        },\n    };\n}\n\n",
+	"published_at": "2022-06-08T19:16:39.393Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1654715796626,
+	"updatedDate": 1659595512538,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

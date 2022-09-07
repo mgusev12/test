@@ -1,0 +1,13 @@
+{
+	"id": "62838a3e98497201a5000527",
+	"title": "Polus_Issue_onChange",
+	"hookType": "onChange",
+	"function": "function onChange(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n    \n  if (Object.keys(response.data).length != 0){  \n  if (response.data.members && response.data.members.responsible && response.data.members.responsible.length != 0 && response.data.members.executor && response.data.members.executor.length != 0 && response.data.info.typeOfWork && response.data.info.typeOfWork.length != 0 && response.data.info.dateTime != 0 && response.data.info.area && response.data.info.area.length != 0 ){\n     \n  }\n  else {\n     delete response.data.memberStatus.responsibleStatus ;\n     response.data.memberStatus.responsibleStatus = \"notIssued\"\n  };\n   \n  if (response.data.info.criticality === \"notCritical\"){\n    response.data.info.stopWork = \"no\"\n  }\n }    \n   return response;\n}",
+	"form": "623b0f296c5347019d00000c",
+	"relationsData": [],
+	"createdDate": 1652787774651,
+	"updatedDate": 1660045879321,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

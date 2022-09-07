@@ -1,0 +1,539 @@
+{
+	"id": "62a1f67e98497201a5000f1c",
+	"scheme": {
+		"order": [
+			"numberObject",
+			"selectTab",
+			"info",
+			"engineer",
+			"responsible"
+		],
+		"properties": {
+			"info": {
+				"type": "object",
+				"order": [
+					"dateTime",
+					"mtp",
+					"count",
+					"units",
+					"organization",
+					"supDocs",
+					"area"
+				],
+				"properties": {
+					"mtp": {
+						"type": "view",
+						"title": "МТР *",
+						"fields": [
+							"name",
+							"units_id"
+						],
+						"viewId": "62f0cae02e0e9a012300096d",
+						"multiple": false,
+						"canCreate": false,
+						"description": "Выберите МТР"
+					},
+					"area": {
+						"type": "dictionary",
+						"title": "Участок *",
+						"hidden": false,
+						"isTree": true,
+						"multiple": false,
+						"description": "Выберите участок",
+						"dictionaryName": "polus_area"
+					},
+					"count": {
+						"type": "number",
+						"title": "Количество *",
+						"description": "Введите количество"
+					},
+					"units": {
+						"type": "dictionary",
+						"title": "Единицы измерения",
+						"hidden": false,
+						"multiple": false,
+						"readOnly": true,
+						"description": "Единициы измерения",
+						"dictionaryName": "polus_units"
+					},
+					"supDocs": {
+						"type": "attachments",
+						"title": "Сопроводительная документация *"
+					},
+					"dateTime": {
+						"type": "datetime",
+						"title": "Дата и время проведения *",
+						"description": "Выберите дату и время"
+					},
+					"organization": {
+						"type": "dictionary",
+						"title": "Поставщик *",
+						"hidden": false,
+						"multiple": false,
+						"description": "Выбрать организацию",
+						"dictionaryName": "polus_suppliers"
+					}
+				}
+			},
+			"result": {
+				"type": "object",
+				"order": [
+					"selectOne",
+					"rejectReason",
+					"close"
+				],
+				"properties": {
+					"close": {
+						"type": "checkboxes",
+						"items": {
+							"enum": [
+								1
+							],
+							"type": "number",
+							"enumNames": [
+								"Да, завершить"
+							]
+						},
+						"title": "Завершить входной контроль?",
+						"hidden": false,
+						"minItems": 0,
+						"readOnly": false,
+						"helperText": "После завершения заявку на входной контроль нельзя будет редактировать."
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"rejected"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не пройден"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Пройден"
+							}
+						],
+						"title": "Работы приняты?",
+						"variant": "button",
+						"helperText": ""
+					},
+					"rejectReason": {
+						"type": "textarea",
+						"title": "Причина отклонения",
+						"hidden": true
+					}
+				}
+			},
+			"crCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"nowTime": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"engineer": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne",
+					"rejectReason"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Инженер ОВиСК *"
+					},
+					"check": {
+						"type": "text",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notAccept"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					},
+					"rejectReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"description": "Укажите причину отклонения"
+					}
+				}
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"test",
+					"inspection",
+					"checklist",
+					"result"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Испытания",
+					"Комиссия",
+					"Чеклист",
+					"Результат"
+				]
+			},
+			"selectTest": {
+				"type": "object",
+				"properties": {
+					"test": {
+						"type": "view",
+						"title": "Испытания",
+						"viewId": "627cc46b98497201a50003e9",
+						"multiple": true,
+						"canCreate": true,
+						"description": "Выберите испытание"
+					}
+				}
+			},
+			"responsible": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Материально-ответственное лицо "
+					},
+					"check": {
+						"type": "text",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notReady"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не готов к входному контролю"
+							},
+							{
+								"enum": [
+									"ready"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Готов к входному контролю"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					}
+				}
+			},
+			"supervision": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne",
+					"rejectReason"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Представитель авторского надзора"
+					},
+					"check": {
+						"type": "text",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notAccept"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					},
+					"rejectReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"description": "Укажите причину отклонения"
+					}
+				}
+			},
+			"numberObject": {
+				"type": "object",
+				"properties": {
+					"number": {
+						"type": "text",
+						"title": "Номер входного контроля",
+						"description": "Введите номер входного контроля"
+					}
+				}
+			},
+			"checklistView": {
+				"type": "view",
+				"title": " Чеклист",
+				"fields": [
+					"name",
+					"variants",
+					"groups"
+				],
+				"viewId": "62e7885c2e0e9a0123000405",
+				"multiple": false,
+				"canCreate": false,
+				"description": "Выберите чеклист"
+			},
+			"subcontractor": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne",
+					"rejectReason"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Представитель заказчика"
+					},
+					"check": {
+						"type": "text",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notAccept"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					},
+					"rejectReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"description": "Укажите причину отклонения"
+					}
+				}
+			},
+			"checklistObject": {
+				"type": "checklist",
+				"title": "Чеклист из чеклиста",
+				"groups": [],
+				"variants": []
+			},
+			"inControlStatus": {
+				"type": "dictionary",
+				"title": "status",
+				"hidden": true,
+				"dictionaryName": "polus_incontrol_status"
+			}
+		}
+	},
+	"title": "Входной контроль",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-06-09T13:33:56.257Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"62a1f67e98497201a5000f1c_630daba504af784083f419a9": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630cb10a00939c408106995d": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630c8ebd00736d40986b64b2": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630c8e34002e7a408b6a5b7f": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630c67f100f5e440a90cb63b": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630735ce00ecc1408a21c9c0": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63073098634261409e738249": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63061a2531b96f40afaac2a7": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63048e6800865a409e0b2ae8": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63037af631886340ab1209ef": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63035cd500b4b6409e23f2e5": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63035c73001e674085e3ec89": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_6303489d00273140981bd3ac": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_630341b5007e38409b9d09cf": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_6303417c0008af409ba78114": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_63033f55009e3e408a103868": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ff9f6536ab9540bba96fd0": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ff9cc036135840bf873b25": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ff9a6a3638e6409332ae45": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ff773f0090c340b5e5e96a": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f26487029c2e408c59e771": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f25c5c000b124093656030": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f257660059ec408a567ce6": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f256f300cd0d40ba8356f2": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f2543e007cd140ac26dde0": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f240f000e361408a4f8d0b": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f116cb360b8d40bfb7485c": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62f0e677366ef240802266c7": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ed1ec302feac40a73ca5c3": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ed1b0c029699408b79facf": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ece9d036d5a140a8b959be": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ecdb1536353d409d98e3a4": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ecd07402afa840a721a851": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eccfab00bb7840bd3a430b": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eccf6236d66c40800c9813": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ebab8900ffc94085d78fd6": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eba55336213640b85d463d": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eba1c5002e29409c5eb060": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eb9381007b2e40878d0e6e": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eb77e200d2a240bb6dce19": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eb769700d97640a77780fb": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62eb69ea005c244098632f80": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ea816b009aa84082bed09d": {
+			"RELATED_TO": true
+		},
+		"62a1f67e98497201a5000f1c_62ea22ef009124409d0715cd": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1654781566840,
+	"updatedDate": 1661172653107,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

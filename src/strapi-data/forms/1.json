@@ -1,0 +1,291 @@
+{
+	"id": "623b0a386c5347019d000004",
+	"scheme": {
+		"order": [
+			"selectTab",
+			"numberOfContract",
+			"constractionObject",
+			"rdCode",
+			"jobCategory",
+			"dateTime",
+			"duration",
+			"typeOfWorkPresented",
+			"hierarchicalDirectory",
+			"forge",
+			"structuralElement",
+			"executiveDocumentations",
+			"workingDocumentations",
+			"description",
+			"volume",
+			"measurementUnits",
+			"reasonForRejection",
+			"comment",
+			"customer",
+			"subcontractor",
+			"contractor",
+			"generalContractor",
+			"authorSupervision"
+		],
+		"required": [
+			"numberOfContract",
+			"constractionObject"
+		],
+		"properties": {
+			"forge": {
+				"type": "forge",
+				"title": "Forge"
+			},
+			"rdCode": {
+				"type": "text",
+				"title": "Шифр РД",
+				"description": "Введите шифр РД"
+			},
+			"volume": {
+				"type": "number",
+				"title": "Объем",
+				"description": "Введите объем"
+			},
+			"comment": {
+				"type": "textarea",
+				"title": "Комментарий",
+				"description": "Введите комментарий"
+			},
+			"customer": {
+				"type": "object",
+				"title": "Заказчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"forge": {
+						"type": "forge",
+						"title": "Forge"
+					},
+					"typeOfWorks": {
+						"type": "dictionary",
+						"title": "Вид предъявляемой работы",
+						"description": "Выберите вид предъявляемой работы",
+						"dictionaryName": "dev_ok_type_of_work"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"dateOfControl": {
+						"type": "date",
+						"title": "Дата проведения контроля"
+					}
+				}
+			},
+			"dateTime": {
+				"type": "datetime",
+				"title": "Дата и время приемки",
+				"helperText": "Желаемая дата и время приёмки: 29 ноя 2021 с 9:00 – 11:00",
+				"description": "Дата и время не установлены"
+			},
+			"duration": {
+				"enum": [
+					15,
+					30,
+					60
+				],
+				"type": "select",
+				"title": "Длительность приёмки",
+				"enumNames": [
+					"15 минут",
+					"30 минут",
+					"1 час"
+				]
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"documentation",
+					"inspection",
+					"result"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Документация",
+					"Комиссия",
+					"Результат приемки"
+				]
+			},
+			"contractor": {
+				"type": "object",
+				"title": "Подрядчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"plannedDate": {
+						"type": "date",
+						"title": "Планируемая дата"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					}
+				}
+			},
+			"description": {
+				"type": "textarea",
+				"title": "Описание",
+				"description": "Введите описание"
+			},
+			"jobCategory": {
+				"enum": [
+					"СМР",
+					"Документация",
+					"Геодезия",
+					"Экология",
+					"Охрана труда"
+				],
+				"type": "select",
+				"title": "Категория предъявляемой работы",
+				"hidden": false
+			},
+			"subcontractor": {
+				"type": "object",
+				"title": "Субподрядчик",
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"plannedDate": {
+						"type": "date",
+						"title": "Планируемая дата"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					}
+				}
+			},
+			"measurementUnits": {
+				"enum": [
+					"м",
+					"м2",
+					"м3",
+					"см",
+					"см2",
+					"см3",
+					"мм",
+					"мм2",
+					"мм3"
+				],
+				"type": "select",
+				"title": "Единицы измерения",
+				"hidden": true,
+				"description": "Единицы измерения объема"
+			},
+			"numberOfContract": {
+				"type": "text",
+				"title": "Номер договора",
+				"description": "Введите номер договора"
+			},
+			"authorSupervision": {
+				"type": "object",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"dateOfControl": {
+						"type": "date",
+						"title": "Дата проведения контроля"
+					}
+				}
+			},
+			"generalContractor": {
+				"type": "object",
+				"title": "Генподрядчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"confirmationDate": {
+						"type": "date",
+						"title": "Дата подтверждения"
+					}
+				}
+			},
+			"structuralElement": {
+				"type": "text",
+				"title": "Конструктивный элемент"
+			},
+			"constractionObject": {
+				"type": "dictionary",
+				"title": "Объект строительства",
+				"desctiption": "Выберите объект строительства",
+				"dictionaryName": "dev_ok_construction_object"
+			},
+			"reasonForRejection": {
+				"enum": [
+					"Нет строительной готовности",
+					"Нет доступа",
+					"Брак"
+				],
+				"type": "select",
+				"title": "Причина отклонения"
+			},
+			"typeOfWorkPresented": {
+				"type": "dictionary",
+				"title": "Вид предъявляемой работы",
+				"description": "Выберите вид предъявляемой работы",
+				"dictionaryName": "dev_ok_ctw"
+			},
+			"hierarchicalDirectory": {
+				"type": "dictionary",
+				"title": "Иерархический справочник",
+				"multiple": true,
+				"desctiption": "Выберите пункт из списка",
+				"dictionaryName": "dev_ok_test_nesting"
+			},
+			"workingDocumentations": {
+				"type": "attachments",
+				"title": "Перечень РД"
+			},
+			"executiveDocumentations": {
+				"type": "attachments",
+				"title": "Перечень ИД"
+			}
+		}
+	},
+	"title": "Form like for mosinz",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-03-23T12:12:20.897Z",
+	"fieldsForMappedTable": null,
+	"tags": [],
+	"relationsData": [],
+	"createdDate": 1648036408793,
+	"updatedDate": 1650449305782,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

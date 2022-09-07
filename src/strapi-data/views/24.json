@@ -1,0 +1,79 @@
+{
+	"id": "62f284f92e0e9a0123000ac7",
+	"title": "тест_view",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "62f284762e0e9a0123000ac3",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"type": "user",
+				"property": "reviewers"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			},
+			{
+				"value": "{\"id\":\"${number}\"}",
+				"operator": "in",
+				"property": "data.number"
+			},
+			{
+				"value": "${criticality}",
+				"operator": "eq",
+				"property": "data.info.criticality"
+			},
+			{
+				"value": "${stopWork}",
+				"operator": "eq",
+				"property": "data.info.stopWork"
+			},
+			{
+				"value": "${dueDate.start}",
+				"operator": "gte",
+				"property": "data.info.dateTime"
+			},
+			{
+				"value": "${dueDate.end}",
+				"operator": "lte",
+				"property": "data.info.dateTime"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 14,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "62f284762e0e9a0123000ac3"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n  const { id, title, createdDate, reviewers, data } = item;\n  const result = {};\n  result.users =\n    reviewers?.length && reviewers[0].name\n      ? reviewers.map((reviewer) => ({\n          avatar: reviewer.avatar,\n          name: reviewer.name,\n          caption: reviewer.organization\n        }))\n      : [];\n  \n  let number = \"№\"\n  if (data.number && data.number != 0){\n      number = \"№ \" + data.number + \"   \";\n  }\n\n  return {\n    ...result,\n    id,\n    title: {\n      value: number,\n      placeholder: \"Не заполнено\",\n      color: \"dark\"\n    }\n  };\n}\n",
+	"published_at": "2022-08-09T16:03:04.872Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1660060921275,
+	"updatedDate": 1660108208656,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

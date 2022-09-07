@@ -1,0 +1,78 @@
+{
+	"id": "630496160016e340a86df273",
+	"formId": "6260fd3f98497201a500000f",
+	"data": {
+		"info": {
+			"volume": "5",
+			"testType": "laboratory",
+			"laboratory": [
+				"5c4b5c76-99d8-4ab2-a822-7ba780a3dafb"
+			],
+			"typeOfLaboratory": [
+				"2a13b010-54b0-4196-b13a-c4ab051d0db2"
+			]
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"applicant": [
+				"623b0cd717562056fee362e8"
+			]
+		},
+		"dateTime": {
+			"dateTimeEnd": 1661849750000,
+			"dateTimeStart": 1660035350000
+		},
+		"areaObject": {
+			"area": [
+				"82fd4bc3-3e6c-4603-af2a-0570d291a514"
+			]
+		},
+		"checkStatus": {
+			"exitCheck": [
+				1
+			],
+			"trialResult": [
+				"630497420023c8408913d12f"
+			],
+			"executorStatus": "accept",
+			"applicantStatus": "ready"
+		},
+		"issueStatus": [
+			"closed"
+		],
+		"numberObject": {
+			"number": "7"
+		},
+		"executorCheck": "6239bd3deef71301bcc56ab2",
+		"applicantCheck": "623b0cd717562056fee362e8"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"623b0cd717562056fee362e8",
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"623b0cd717562056fee362e8_630496160016e340a86df273": {
+			"ASSIGNED_TO": true
+		},
+		"6239bd3deef71301bcc56ab2_630496160016e340a86df273": {
+			"ASSIGNED_TO": true
+		},
+		"6260fd3f98497201a500000f_630496160016e340a86df273": {
+			"RELATED_TO": true
+		},
+		"62e8ed8dcb0eeb1d34ca7928_630496160016e340a86df273": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1661245134159,
+	"updatedDate": 1661245647655,
+	"assignedTo": "62e8ed8dcb0eeb1d34ca7928",
+	"parent": null
+}

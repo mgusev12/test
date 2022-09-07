@@ -1,0 +1,153 @@
+{
+	"id": "627cc46b98497201a50003e9",
+	"title": "Испытания",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "6260fd3f98497201a500000f",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			},
+			{
+				"type": "user",
+				"property": "reviewers"
+			},
+			{
+				"type": "user",
+				"property": "data.members.applicant"
+			},
+			{
+				"value": "${name}",
+				"operator": "contains",
+				"property": "title"
+			},
+			{
+				"property": "data.issueStatus",
+				"dictionaryName": "polus_trial_status"
+			},
+			{
+				"value": "${dueDate.start}",
+				"operator": "gte",
+				"property": "data.dateTime.dateTimeEnd"
+			},
+			{
+				"value": "${dueDate.end}",
+				"operator": "lte",
+				"property": "data.dateTime.dateTimeEnd"
+			},
+			{
+				"property": "data.areaObject.area",
+				"dictionaryName": "polus_area"
+			},
+			{
+				"value": "${status}",
+				"operator": "in",
+				"property": "data.issueStatus"
+			},
+			{
+				"value": "${testType}",
+				"operator": "in",
+				"property": "data.info.testType"
+			},
+			{
+				"value": "${applicant}",
+				"operator": "in",
+				"property": "data.members.applicant"
+			},
+			{
+				"value": "${executor}",
+				"operator": "in",
+				"property": "data.members.executor"
+			},
+			{
+				"value": "${testType}",
+				"operator": "eq",
+				"property": "data.info.testType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 14,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "6260fd3f98497201a500000f"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n  const { id, title, createdDate, reviewers, data } = item;\n  const result = {};\n  const startDate = data.dateTime.dateTimeStart != 0 ? new Date(data.dateTime.dateTimeStart).toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'long', year: 'numeric', hour:\"numeric\",minute: 'numeric'}) : \"Отсутствует\";\n  result.users =\n    reviewers?.length && reviewers[0].name\n      ? reviewers.map((reviewer) => ({\n          avatar: reviewer.avatar,\n          name: reviewer.name,\n          caption: reviewer.organization\n        }))\n      : [];\n  \n  let status = \" \"\n  let testTypeChips = (data.info.testType === \"laboratory\") ? \"Лабораторное\" : (data.info.testType === \"geodetic\") ? \"Геодезические\" : \" \" ;\n  let areaField = \"\"\n  if ((data.areaObject) && (data.areaObject.area) && data.areaObject.area.length != 0){\n     areaField = data.areaObject.area?.length && data.areaObject.area[0].name \n  }\n  else {\n    areaField = \"Участок не выбран\"\n  } \n  \n  let orgName = \"\"\n  if ((data.members) && (data.members.applicant) && data.members.applicant.length != 0){\n    orgName = data.members.applicant[0].organization\n  }\n  else {\n    orgName = \"Пусто\"\n  }\n  \n let trial_number = \"№\"\n  if (data.numberObject && data.numberObject.number && data.numberObject.number != 0){\n      trial_number = \"№ \" + data.numberObject.number + \"   \";\n  }\n\n  if (data.issueStatus && data.issueStatus.length != 0) {\n    status = data.issueStatus[0].name\n    result.icon = {\n      value: data.issueStatus[0].icon,\n      color: data.issueStatus[0].color\n    };\n  }\n\n  return {\n    ...result,\n    id,\n    title: {\n      value: data.info.type,\n      placeholder: trial_number + \" от \" +  orgName,\n      color: \"dark\"\n    },\n    description: {\n      value: status + \" , \" + \"Дата и время начала : \" + startDate ,\n      placeholder: \"Описание карточки\"\n    },\n    \n\n    chips: [\n      {\n        icon: \"Ruler\",\n        value: testTypeChips,\n        placeholder: \"Пусто\",\n        color: \"grey[100]\",\n        background: \"action.hover\"\n      }\n    ],\n    fields: [\n      {\n        value: areaField,\n        color: \"dark\",\n        placeholder: \"  \",\n        width: 350\n      }\n    ]\n  };\n  console.log(result)\n}\n",
+	"published_at": "2022-05-12T08:25:16.948Z",
+	"filters": [
+		{
+			"icon": "Status",
+			"type": "view",
+			"title": "По статусу",
+			"params": {
+				"status": ""
+			},
+			"viewId": "62a1a6cb98497201a5000e5d"
+		},
+		{
+			"icon": "Project",
+			"type": "list",
+			"title": "По типу испытаний",
+			"params": {
+				"testType": ""
+			}
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По заявителю",
+			"params": {
+				"applicant": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По исполнителю",
+			"params": {
+				"executor": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "Calendar",
+			"type": "date",
+			"title": "По дате создания",
+			"params": {
+				"dueDate": {
+					"end": "",
+					"start": ""
+				}
+			}
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1652343915026,
+	"updatedDate": 1659951550320,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

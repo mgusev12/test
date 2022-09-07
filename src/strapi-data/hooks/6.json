@@ -1,0 +1,13 @@
+{
+	"id": "627373ff98497201a50000a3",
+	"title": "Polus_Issue_onCreate",
+	"hookType": "onCreate",
+	"function": "function onCreate(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n\n    response.data.members = {responsible:[user.id],executor:[]}\n    response.data.memberStatus = {responsibleStatus: 'notIssued'} \n    response.data.info = {dateTime: 0, typeOfWork: [], criticality: 'notCritical', contraventionObject: 'work', area:[], stopWork: 'no'}\n    response.data.attachmentsAndComment = {}\n    response.data.crCheck = \"1\"\n    response.data.dateCheck = {oldDate: 0, dateCount: 0}\n  \n    return response;\n}",
+	"form": "623b0f296c5347019d00000c",
+	"relationsData": [],
+	"createdDate": 1651733503557,
+	"updatedDate": 1655713182108,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,13 @@
+{
+	"id": "62fcb2ada390a20125000021",
+	"title": "test_OnSave",
+	"hookType": "onSave",
+	"function": "function onSave(props) {\n    const { item, user } = props;\n    const formInstance = {...item};\n    const { data } = formInstance;\n    if (formInstance.data.testViewDisplay) {\n\tdelete formInstance.data.testViewDisplay;\n    }\n    console.warn(\"onSave\", formInstance.data);\n    return formInstance;\n}",
+	"form": "62f284762e0e9a0123000ac3",
+	"relationsData": [],
+	"createdDate": 1660727981314,
+	"updatedDate": 1660728083041,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,13 @@
+{
+	"id": "628e29f798497201a500084b",
+	"title": "Polus_Trial_canChange",
+	"hookType": "canChange",
+	"function": "function canChange(props) {\n   const { item, user, changes } = props;  \n   console.log(props);   \n   const user_ID = user.id;\n   let flag_p = false;\n   if (item.data.members) {\n     if (user_ID.includes(item.data.members.applicant) || user_ID.includes(item.data.members.executor)) {\n           flag_p = true;\n        }\n     }\n   \n   return flag_p;\n}",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1653484023064,
+	"updatedDate": 1653560131478,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,13 @@
+{
+	"id": "6284f15398497201a50005c1",
+	"title": "Polus_Trial_onChange",
+	"hookType": "onChange",
+	"function": "function onChange(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n\n\n if (Object.keys(response.data).length != 0 ){\n    if (response.data.members && response.data.members.applicant && response.data.dateTime.dateTimeStart != 0 && response.data.dateTime.dateTimeEnd != 0 && ((response.data.info.testType === \"laboratory\" && response.data.info.laboratory && response.data.info.laboratory.length != 0  && response.data.info.typeOfLaboratory && response.data.info.typeOfLaboratory.length != 0) || (response.data.info.testType === \"geodetic\" )) && response.data.members.applicant.length != 0 && response.data.members.executor && response.data.members.executor.length != 0 && response.data.areaObject && response.data.areaObject.area && response.data.areaObject.area.length != 0 ){\n         \n   }\n   else{\n        delete response.data.checkStatus.applicantStatus\n        response.data.checkStatus.applicantStatus = \"notReady\"\n   }\n }\n  \n  return response;\n  \n}",
+	"form": "6260fd3f98497201a500000f",
+	"relationsData": [],
+	"createdDate": 1652879699718,
+	"updatedDate": 1661242098119,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

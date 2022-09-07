@@ -1,0 +1,13 @@
+{
+	"id": "623b0f9f6c5347019d00000e",
+	"title": "canCreate schedule",
+	"hookType": "canCreate",
+	"function": "function canCreate(props) {\n        const { user } = props;\nconst id = \"60407d58397da104e9668591\";\n//console.warn(\"id\", id);\n        return user.id !== id;\n}",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1648037791759,
+	"updatedDate": 1653909917798,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

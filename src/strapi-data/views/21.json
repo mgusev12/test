@@ -1,0 +1,32 @@
+{
+	"id": "62f0c9d12e0e9a0123000969",
+	"title": "Поставщики для входного контроля",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_suppliers",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"UserGroup\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-08T08:31:33.884Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659947473079,
+	"updatedDate": 1659948691744,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,37 @@
+{
+	"id": "62e7daf92e0e9a012300041e",
+	"title": "Справочник dev_ok_cafm",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "dev_ok_cafm",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-01T13:54:03.854Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659362041559,
+	"updatedDate": 1659362043875,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,13 @@
+{
+	"id": "62e7d8372e0e9a0123000414",
+	"title": "onCreate cafm",
+	"hookType": "onCreate",
+	"function": "function onCreate(props) {\n        const { user, item, initData } = props;\n        const response = { ...item };\n        response.data.cafm = initData;\n        return response;\n}",
+	"form": "623b0ef86c5347019d00000a",
+	"relationsData": [],
+	"createdDate": 1659361335707,
+	"updatedDate": 1659361335718,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

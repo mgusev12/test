@@ -1,0 +1,47 @@
+{
+	"id": "629df08e98497201a5000c77",
+	"title": "Users",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "ASCENDING",
+				"property": "name"
+			}
+		],
+		"type": "user",
+		"query": [
+			{
+				"value": "${name}",
+				"operator": "contains",
+				"property": "name"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"User\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n        description: {\n            value: item.organization,\n            placeholder: \"Описание карточки\",\n        },\n    };\n}",
+	"published_at": "2022-06-07T12:52:29.982Z",
+	"filters": [
+		{
+			"icon": "CompleteInput",
+			"type": "text",
+			"title": "По имени",
+			"params": {
+				"name": ""
+			},
+			"placeholder": "Введите имя"
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1654517902060,
+	"updatedDate": 1654606350003,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,40 @@
+{
+	"id": "62f506022e0e9a0123000bd0",
+	"templateName": "ПробаАттачментов",
+	"SQL": "[{\"title\": \"attachments\", \"sqlRequest\": \"{many}select count (att_info) as ats_num, jsonb_agg (att_info::jsonb) as all_att from (select t_num, jsonb_build_object ('att_num'::text,ord, 'attUrl'::text, att_url) as att_info from (select row_number() over (partition by t2.t_num) as ord, t2.t_num, concat ('https://288120.selcdn.ru/platform-s3/', d.url) as att_url from (select t_num, jsonb_array_elements_text (att_ids) as att_id from (select case when (data ? 'attachmentsAndComment') and (data -> 'attachmentsAndComment') ? 'attachments' then (data -> 'attachmentsAndComment') -> 'attachments' else null end as att_ids, case when (data ? 'numberObject') then (data -> 'numberObject') ->> 'number' else ' ' end as t_num from form_instances where \\\"isArchived\\\" = false and \\\"formId\\\" = '623b0f296c5347019d00000c' <#if ids??> AND uuid IN (<#list ids as i>'${i}'<#if !i?is_last>, </#if></#list>)</#if> ) t1 ) t2 left join \\\"document\\\" d on t2.att_id = d.id where d.\\\"name\\\" like '%.jpg' or d.\\\"name\\\" like '%.png' ) t3 ) t4 group by t_num\"}]",
+	"metadata": null,
+	"fileTitle": "Проверка фото №{reportNumber} от {reportDate}",
+	"formId": "62c56c222e0e9a0123000008",
+	"filenameExtension": "docx",
+	"published_at": "2022-08-11T13:37:07.901Z",
+	"locationFilter": "^view.*",
+	"template": {
+		"id": 40,
+		"uuid": "62f60b152e0e9a0123000c0c",
+		"name": "аттачментыПроба (7).docx",
+		"alternativeText": "",
+		"caption": "",
+		"width": null,
+		"height": null,
+		"formats": null,
+		"hash": "attachmenty_Proba_7_8e001f09b3",
+		"ext": ".docx",
+		"mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+		"size": 22.64,
+		"url": "/selectel?filePath=development/attachmenty_Proba_7_8e001f09b3.docx",
+		"previewUrl": null,
+		"provider": "selectel",
+		"provider_metadata": null,
+		"created_at": "2022-08-12T08:11:01.152Z",
+		"updated_at": "2022-08-12T08:11:01.177Z"
+	},
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": [],
+	"createdDate": 1660225026048,
+	"updatedDate": 1660291869254,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

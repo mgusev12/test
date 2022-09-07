@@ -1,0 +1,68 @@
+{
+	"id": "62f39eb102c4d640935efd34",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"82fd4bc3-3e6c-4603-af2a-0570d291a514"
+			],
+			"dateTime": 1660134097089,
+			"stopWork": "no",
+			"typeOfWork": [
+				"d652684d-a167-48d4-87d0-b861efd6f626"
+			],
+			"criticality": "notCritical",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 1660134097089,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"opened"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"executorStatus": "notIssued",
+			"responsibleStatus": "issued"
+		},
+		"numberObject": {
+			"number": 1212
+		},
+		"executorCheck": "6239bd3deef71301bcc56ab2",
+		"responsibleCheck": "6239bd3deef71301bcc56ab2",
+		"attachmentsAndComment": {
+			"attachments": [
+				"62f39ecb02df8b40a1cb8b0e"
+			]
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_62f39eb102c4d640935efd34": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f39eb102c4d640935efd34": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1660133085811,
+	"updatedDate": 1660197015626,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

@@ -1,0 +1,37 @@
+{
+	"id": "62f0cae02e0e9a012300096d",
+	"title": "МТР для входного контроля",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_mtp",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Template\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-08T08:35:46.533Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659947744957,
+	"updatedDate": 1660918372455,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

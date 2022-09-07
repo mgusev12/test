@@ -1,0 +1,32 @@
+{
+	"id": null,
+	"formId": "62cd6834c8254e008400000c",
+	"data": {
+		"name": "Test",
+		"selectAny": [
+			0,
+			2
+		],
+		"selectOne": "one",
+		"objectType": "????? ????????",
+		"selectVariantsB": "2",
+		"selectVariantsR": "2"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": "62cd56507a90f17aafef5304",
+	"reviewers": [],
+	"relationsData": {
+		"62cd56507a90f17aafef5304_undefined": {
+			"OWNER": true
+		},
+		"62cd6834c8254e008400000c_undefined": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661511664400,
+	"updatedDate": 1661511664400,
+	"assignedTo": null,
+	"parent": null
+}

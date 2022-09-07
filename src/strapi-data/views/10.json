@@ -1,0 +1,32 @@
+{
+	"id": "62a1a6cb98497201a5000e5d",
+	"title": "Статусы для испытаний",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_trial_status",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    const result = {};\n\n    if (id === \"draft\") {\n        let draft = \"grey[100]\";\n        result.icon = {\n          value: \"Status0\",\n          color: draft\n        };\n      } else if (id === \"rejected\") {\n        let rejected = \"error.main\";\n        result.icon = {\n          value: \"Status50\",\n          color: rejected\n        };\n      } else if (id === \"review\") {\n        let review = \"states.completed\";\n        result.icon = {\n          value: \"Status25\",\n          color: review\n        };\n      } else if (id === \"closed\") {\n        let closed = \"success.main\";\n        result.icon = {\n          value: \"Status100\",\n          color: closed\n        };\n      } else if (id === \"confirmed\") {\n        let confirmed = \"info.main\";\n        result.icon = {\n          value: \"Status50\",\n          color: confirmed\n        };\n      }\n  \n      \n\n    return {\n        ...result,\n        id,\n        title: {\n            value: name,\n            placeholder: \"Статус испытаний\",\n        },\n    };\n}\n",
+	"published_at": "2022-06-09T08:03:39.662Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1654761163751,
+	"updatedDate": 1659600337159,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

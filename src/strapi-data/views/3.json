@@ -1,0 +1,160 @@
+{
+	"id": "627cc1be98497201a50003db",
+	"title": "Приёмка работ",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "6260fd7098497201a5000013",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			},
+			{
+				"value": "${workType}",
+				"operator": "in",
+				"property": "data.actAndTypeOfWorkObject.typeOfWork"
+			},
+			{
+				"value": "${status}",
+				"operator": "in",
+				"property": "data.requestStatus"
+			},
+			{
+				"value": "${subcontractor}",
+				"operator": "in",
+				"property": "data.subcontractor.user"
+			},
+			{
+				"value": "${customerRepresentative}",
+				"operator": "in",
+				"property": "data.customerRepresentative.user"
+			},
+			{
+				"property": "data.areaObject.area",
+				"dictionaryName": "polus_area"
+			},
+			{
+				"property": "data.actAndTypeOfWorkObject.typeOfWork",
+				"dictionaryName": "polus_type_of_work"
+			},
+			{
+				"value": "${name}",
+				"operator": "contains",
+				"property": "title"
+			},
+			{
+				"type": "user",
+				"property": "reviewers"
+			},
+			{
+				"property": "data.requestStatus",
+				"dictionaryName": "polus_req_status"
+			},
+			{
+				"value": "${act}",
+				"operator": "contains",
+				"property": "data.actAndTypeOfWorkObject.act"
+			},
+			{
+				"type": "user",
+				"property": "data.subcontractor.user"
+			},
+			{
+				"property": "data.dateTimeDuration.duration",
+				"dictionaryName": "polus_durations"
+			},
+			{
+				"value": "${createDate.start}",
+				"operator": "gte",
+				"property": "createdDate"
+			},
+			{
+				"value": "${createDate.end}",
+				"operator": "lte",
+				"property": "createdDate"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			}
+		],
+		"pagination": {
+			"limit": 14,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "6260fd7098497201a5000013"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, title, createdDate, reviewers, data } = item;\n    const result = {};\n   const dueDate = typeof data.dateTimeDuration.dateTime != \"undefined\" ? new Date(data.dateTimeDuration.dateTime).toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'long', year: 'numeric', hour:\"numeric\",minute: 'numeric'}) : \"Отсутствует\";\n    result.users =\n      reviewers?.length && reviewers[0].name\n        ? reviewers.map((reviewer) => ({\n            avatar: reviewer.avatar,\n            name: reviewer.name,\n            caption: reviewer.organization\n          }))\n        : [];\n    \n    let status = \" \"\n    let areaField = \"\"\n    if ((data.areaObject) && (data.areaObject.area) && data.areaObject.area.length != 0){\n      areaField = data.areaObject.area?.length && data.areaObject.area[0].name \n    }\n    else {\n      areaField = \"Участок не выбран\"\n    }; \n    let typeOfWork = \"\"\n     if ((data.actAndTypeOfWorkObject) && (data.actAndTypeOfWorkObject.typeOfWork) && data.actAndTypeOfWorkObject.typeOfWork.length != 0){\n      typeOfWork = data.actAndTypeOfWorkObject.typeOfWork?.length && data.actAndTypeOfWorkObject.typeOfWork[0].name \n    }\n    else {\n      typeOfWork = \"Вид работ не выбран\"\n    } ;\n    \n    let request_number = \"№\"\n    if (data.numberObject && data.numberObject.number && data.numberObject.number != 0){\n        request_number = \"№ \" + data.numberObject.number + \"   \";\n    }\n\n    let orgName = \"\"\n    if ((data.subcontractor) && (data.subcontractor.user) && data.subcontractor.user.length != 0){\n      orgName = data.subcontractor.user[0].organization\n    }\n    else {\n      orgName = \"Пусто\"\n    }\n    \n  \n    let statTime = \"Не установлено\"\n    let endTime = \"\"\n    let durTime = 0 \n    if (typeof(data.dateTimeDuration.dateTime) != \"undefined\" && typeof(data.dateTimeDuration.duration) != \"undefined\" && data.dateTimeDuration.duration.length != 0){\n        durTime = 900000 * data.dateTimeDuration.duration[0].sorting\n         endTime = new Date(data.dateTimeDuration.dateTime + durTime).toLocaleTimeString(\"ru-Ru\",{hour:\"numeric\",minute: 'numeric'})\n      statTime = dueDate + ' - ' +  endTime\n    }\n  \n    \n    if (data.requestStatus && data.requestStatus.length != 0) {\n      status = data.requestStatus[0].name\n      result.icon = {\n        value: data.requestStatus[0].icon,\n        color: data.requestStatus[0].color\n      };\n    }\n  \n    return {\n      ...result,\n      id,\n      title: {\n        value: data.info,\n        placeholder: request_number + \" от \" +  orgName,\n        color: \"dark\"\n      },\n      description: {\n        value: status + ', ' + statTime,\n        placeholder: \"Не установленно\"\n      },\n      fields: [\n        {\n          value: typeOfWork,\n          placeholder: \"Вид работ\",\n          color: \"dark\",\n          width: 350\n        }\n      ],\n  \n      chips: [\n        {\n          icon: \"Error\",\n          value: areaField,\n          placeholder: \"Пусто\",\n          color: \"dark\",\n          background: \"action.hover\"\n        }\n      ]\n    };\n  }\n  ",
+	"published_at": "2022-05-12T08:13:54.227Z",
+	"filters": [
+		{
+			"icon": "Status",
+			"type": "view",
+			"title": "По статусу",
+			"params": {
+				"status": ""
+			},
+			"viewId": "62a1a84298497201a5000e5f"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По представителю генподрядчика",
+			"params": {
+				"subcontractor": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По представителю заказчика",
+			"params": {
+				"customerRepresentative": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "CompleteInput",
+			"type": "text",
+			"title": "По номеру акта",
+			"params": {
+				"act": ""
+			},
+			"placeholder": "Введите номер акта"
+		},
+		{
+			"icon": "Project",
+			"type": "view",
+			"title": "По виду работ",
+			"params": {
+				"workType": ""
+			},
+			"viewId": "629dcdda98497201a5000c61"
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1652343230266,
+	"updatedDate": 1660640269072,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

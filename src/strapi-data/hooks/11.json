@@ -1,0 +1,13 @@
+{
+	"id": "6284937d98497201a500058a",
+	"title": "Polus_Issue_canChange",
+	"hookType": "canChange",
+	"function": "function canChange(props) {\n        const { base, item, user, changes } = props;\n        console.log(\"canChange\");   \n        console.log(props);      \n\n        if (formInstance.data.memberStatus.responsibleStatus === \"issued\" && formInstance.data.memberStatus.executorStatus === \"issued\" && formInstance.data.memberStatus.eliminationConfirmation === \"issued\" && formInstance.data.memberStatus.close == 1) {\n            return false; \n        } else {\n            return true;\n        }\n}",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1652855677821,
+	"updatedDate": 1652877467428,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

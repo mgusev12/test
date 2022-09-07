@@ -1,0 +1,112 @@
+{
+	"id": "630dc46c0036734097447ec7",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"fba96178-86c4-4875-bb4d-f771978848f9"
+			],
+			"cafm": {
+				"pin": {
+					"h": 42,
+					"w": 28,
+					"id": "630dc4a02c395040b4267587",
+					"name": "anno-image",
+					"angle": 0,
+					"image": {},
+					"bounds": {
+						"left-top": {
+							"x": 891.9249877929688,
+							"y": 621.519775390625
+						},
+						"right-bottom": {
+							"x": 919.9249877929688,
+							"y": 663.519775390625
+						}
+					},
+					"points": [
+						{
+							"x": 891.9249877929688,
+							"y": 621.519775390625
+						}
+					],
+					"styles": {
+						"fillStyle": "rgb(255,0,0)",
+						"lineWidth": 2,
+						"strokeStyle": "rgb(255,0,0)"
+					},
+					"imageUrl": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzNiA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDQ5QzE5Ljc3NSA0OSAyMS4yMjIyIDQ3LjU2NjcgMjEuMjIyMiA0NS43ODg0QzIxLjIyMjIgNDQuMDEwMiAxOS43NzUgNDIuNTc2OSAxOCA0Mi41NzY5QzE2LjIyNSA0Mi41NzY5IDE0Ljc3NzggNDQuMDEwMiAxNC43Nzc4IDQ1Ljc4ODRDMTQuNzc3OCA0Ny41NjY3IDE2LjIyNSA0OSAxOCA0OVoiIGZpbGw9IiM2QjcyODAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjguMTg1OCAzMC41NjgyTDI4LjE4NjQgMzAuNTY3OEMzMi4zMTMyIDI3LjU4IDM1IDIyLjgwOTMgMzUgMTcuNDIxQzM1IDguMzE3NTEgMjcuMzUzOCAxIDE4IDFDOC42NDYyMiAxIDEgOC4zMTc1MSAxIDE3LjQyMUMxIDIyLjgwOTUgMy42ODY0MiAyNy41ODExIDcuODEzNTkgMzAuNTY4OUw3LjgxNDE3IDMwLjU2OTRDOC44NjY1NiAzMS4zMzAxIDkuODU1MDUgMzEuOTM4NCAxMC43MjE3IDMyLjQ3MTdDMTAuNzYyMiAzMi40OTY2IDEwLjgwMjQgMzIuNTIxNCAxMC44NDI0IDMyLjU0NkMxMS43NTM0IDMzLjEwNjggMTIuNDk0MiAzMy41NyAxMy4wOTk3IDM0LjA2NkMxMy42OTE3IDM0LjU1MDggMTQuMTE2NiAzNS4wMzgxIDE0LjQwMjMgMzUuNjIwMUMxNC42ODc5IDM2LjIwMTkgMTQuODY2NyAzNi45NDQgMTQuODY2NyAzNy45ODIzQzE0Ljg2NjcgMzkuNzA0NiAxNi4zMDQ2IDQxLjAzODUgMTggNDEuMDM4NUMxOS42OTU0IDQxLjAzODUgMjEuMTMzMyAzOS43MDQ2IDIxLjEzMzMgMzcuOTgyM0MyMS4xMzMzIDM2Ljk0NCAyMS4zMTIxIDM2LjIwMTggMjEuNTk3NyAzNS42MTk5QzIxLjg4MzUgMzUuMDM3NyAyMi4zMDg0IDM0LjU1MDMgMjIuOTAwNCAzNC4wNjUzQzIzLjUwNTkgMzMuNTY5MyAyNC4yNDY3IDMzLjEwNTkgMjUuMTU3NyAzMi41NDVDMjUuMTk3OSAzMi41MjAyIDI1LjIzODUgMzIuNDk1MiAyNS4yNzkzIDMyLjQ3MDFDMjYuMTQ1NyAzMS45MzY4IDI3LjEzMzkgMzEuMzI4NyAyOC4xODU4IDMwLjU2ODJaIiBmaWxsPSIjNkI3MjgwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGVsbGlwc2UgY3g9IjE4IiBjeT0iMTcuOTIzMSIgcng9IjcuMTExMTEiIHJ5PSI3LjA3NjkyIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+				},
+				"shapes": [],
+				"document": {
+					"id": "63ebf995-fcb8-4100-8886-1be8c9e2cef0",
+					"src": "https://288120.selcdn.ru/platform-s3/plans/db88f579-4322-4bd7-a664-dbf4a3cd1cb9/sheet/1/manifest.json",
+					"name": "Чертеж 3",
+					"parent_id": "67dca4f5-d142-417f-9b1a-79099cc437c8"
+				}
+			},
+			"dateTime": 1661933037000,
+			"stopWork": "no",
+			"typeOfWork": [
+				"f6d4d3a5-79a5-47e8-b402-98d73eed4235"
+			],
+			"criticality": "notCritical",
+			"disturbedPoint": [
+				"54a3079f-35fa-4caf-bf61-63b298b486e8"
+			],
+			"remedialAction": "починить",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 1661933037000,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"opened"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"executorStatus": "notIssued",
+			"responsibleStatus": "issued"
+		},
+		"numberObject": {
+			"number": 1
+		},
+		"executorCheck": "6239bd3deef71301bcc56ab2",
+		"responsibleCheck": "6239bd3deef71301bcc56ab2",
+		"attachmentsAndComment": {
+			"comment": "описание",
+			"attachments": [
+				"630dc47800a0d340958d8eca"
+			]
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_630dc46c0036734097447ec7": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_630dc46c0036734097447ec7": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661846710460,
+	"updatedDate": 1661846710460,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

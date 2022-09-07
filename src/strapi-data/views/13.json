@@ -1,0 +1,176 @@
+{
+	"id": "62a9813198497201a50010c8",
+	"title": "Входной контроль",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "62a1f67e98497201a5000f1c",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			},
+			{
+				"property": "data.inControlStatus",
+				"dictionaryName": "polus_incontrol_status"
+			},
+			{
+				"value": "${owner}",
+				"operator": "eq",
+				"property": "owner"
+			},
+			{
+				"value": "${title}",
+				"operator": "contains",
+				"property": "title"
+			},
+			{
+				"value": "${name}",
+				"operator": "contains",
+				"property": "title"
+			},
+			{
+				"value": "${createDate.start}",
+				"operator": "gte",
+				"property": "createdDate"
+			},
+			{
+				"value": "${createDate.end}",
+				"operator": "lte",
+				"property": "createdDate"
+			},
+			{
+				"value": "${updateDate.start}",
+				"operator": "gte",
+				"property": "updatedDate"
+			},
+			{
+				"value": "${updateDate.end}",
+				"operator": "lte",
+				"property": "updatedDate"
+			},
+			{
+				"property": "data.info.organization",
+				"dictionaryName": "polus_suppliers"
+			},
+			{
+				"property": "data.info.mtp[0].id",
+				"dictionaryName": "polus_mtp"
+			},
+			{
+				"property": "data.info.units",
+				"dictionaryName": "polus_units"
+			},
+			{
+				"type": "user",
+				"property": "reviewers"
+			},
+			{
+				"value": "${status}",
+				"operator": "in",
+				"property": "data.inControlStatus"
+			},
+			{
+				"value": "${mtp}",
+				"operator": "in",
+				"property": "data.info.mtp"
+			},
+			{
+				"value": "${supplier}",
+				"operator": "in",
+				"property": "data.info.organization"
+			},
+			{
+				"value": "${engineer}",
+				"operator": "in",
+				"property": "data.engineer.user"
+			},
+			{
+				"value": "${units}",
+				"operator": "in",
+				"property": "data.info.units"
+			},
+			{
+				"type": "user",
+				"property": "data.engineer.user"
+			},
+			{
+				"value": "${test}",
+				"operator": "contains",
+				"property": "title"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 14,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "62a1f67e98497201a5000f1c"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n  const { id, title, createdDate, reviewers, data } = item;\n  const result = {};\n  const dueDate = data.info.dateTime != 0 ? new Date(data.info.dateTime).toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'long', year: 'numeric'}) : \"Отсутствует\";\n  result.users =\n    reviewers?.length && reviewers[0].name\n      ? reviewers.map((reviewer) => ({\n          avatar: reviewer.avatar,\n          name: reviewer.name,\n          caption: reviewer.organization\n        }))\n      : [];\n  let org = \"\"\n  if (data.info && data.info.organization && data.info.organization.length != 0){\n    org = \"от \" + data.info.organization[0].name;\n  }\n \n  let unit = \"шт\"\n  if (data.info && data.info.units){\n  unit = data.info.units[0].name\n}\n\n  let countChips = (typeof(data.info.count) != \"undefined\") ? (data.info.count + ' ' + unit) : \"Не указано\";\n\n  let inControl_number = \"№ \"\n  if (data.numberObject && data.numberObject.number && data.numberObject.number != 0){\n      inControl_number = \"№ \" + data.numberObject.number + \"   \";\n  }\n\n  let mtp = inControl_number + \"  Не заполнено\"\n  if (data.info && data.info.mtp && data.info.mtp.length != 0){\n    mtp = inControl_number +  data.info.mtp[0].name;\n  }\n  \n  let org_width = 250\n  \n  if (data.info) {\n      result.chips = [\n        {\n          value: countChips,\n          placeholder: \"Пусто\",\n          color: \"dark\",\n          background: \"action.hover\",\n        }\n      ]\n  }\n  \n  if (data.inControlStatus && data.inControlStatus.length != 0) {\n    status = data.inControlStatus[0].name;\n    result.icon = {\n      value: data.inControlStatus[0].icon,\n      color: data.inControlStatus[0].color\n    }\n  }\n\n  return {\n    ...result,\n    id,\n    title: {\n      value: mtp,\n      placeholder: \"Не заполнено\",\n      color: \"dark\"\n    },\n    description: {\n      value: dueDate,\n      placeholder: \"Дата проведения\"\n    },\n    fields: [\n      {\n        value: org,\n        placeholder: \"Организации ответственного\",\n        color: \"dark\",\n        width: org_width\n      }\n    ]\n  };\n}\n",
+	"published_at": "2022-06-15T09:07:25.855Z",
+	"filters": [
+		{
+			"icon": "Status",
+			"type": "view",
+			"title": "По статусу",
+			"params": {
+				"status": ""
+			},
+			"viewId": "62f0bb1f2e0e9a012300095f"
+		},
+		{
+			"icon": "Template",
+			"type": "view",
+			"title": "По МТР",
+			"params": {
+				"mtp": ""
+			},
+			"viewId": "62f0cae02e0e9a012300096d"
+		},
+		{
+			"icon": "UserGroup",
+			"type": "view",
+			"title": "По организации поставщика",
+			"params": {
+				"supplier": ""
+			},
+			"viewId": "62f0c9d12e0e9a0123000969"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По инженеру ОВиСК",
+			"params": {
+				"engineer": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1655275825769,
+	"updatedDate": 1661159837519,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

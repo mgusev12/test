@@ -1,0 +1,13 @@
+{
+	"id": "62a854f798497201a5001044",
+	"title": "Polus_Trial_canSave",
+	"hookType": "canSave",
+	"function": "function canSave(props) {\n    console.log(\"canSave\", props);\n    const { item, user } = props;\n    const data = item.data;\n    \n    const attachmentFields = [\"trialResult\"];\n    \n    const isLoadedAttachments = attachmentFields.some(field => {\n        const values = data[field];\n        return !!values && !!values.includes(\"uploaded\");\n    })\n\n    return !isLoadedAttachments;\n}",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1655198967917,
+	"updatedDate": 1659597105622,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

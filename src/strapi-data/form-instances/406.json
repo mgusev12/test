@@ -1,0 +1,59 @@
+{
+	"id": "62f3a34f00bdc840bffd27fa",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"dateTime": 0,
+			"stopWork": "no",
+			"criticality": "notCritical",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 0,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"draft"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"responsibleStatus": "notIssued"
+		},
+		"numberObject": {
+			"number": 898
+		},
+		"responsibleCheck": "6239bd3deef71301bcc56ab2",
+		"attachmentsAndComment": {
+			"attachments": [
+				"62f4fe9500e7e540a8e627b3",
+				"62f4fe9a009d3340ac0438f1",
+				"62f4feab003c1d40a048a145"
+			]
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_62f3a34f00bdc840bffd27fa": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f3a34f00bdc840bffd27fa": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1660134230077,
+	"updatedDate": 1660223622981,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

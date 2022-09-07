@@ -1,0 +1,179 @@
+{
+	"id": "623b11816c5347019d00001c",
+	"title": "Замечания",
+	"class": "list",
+	"query": {
+		"sort": [
+			{
+				"sort": "DESCENDING",
+				"property": "createdDate"
+			}
+		],
+		"type": "formInstance",
+		"query": [
+			{
+				"value": "623b0f296c5347019d00000c",
+				"operator": "eq",
+				"property": "formId"
+			},
+			{
+				"property": "data.info.typeOfWork",
+				"dictionaryName": "polus_type_of_work"
+			},
+			{
+				"value": "${status}",
+				"operator": "in",
+				"property": "data.issueStatus"
+			},
+			{
+				"value": "${workType}",
+				"operator": "in",
+				"property": "data.info.typeOfWork"
+			},
+			{
+				"type": "user",
+				"property": "data.members.responsible"
+			},
+			{
+				"value": "${responsible}",
+				"operator": "in",
+				"property": "data.members.responsible."
+			},
+			{
+				"type": "user",
+				"property": "data.members.executor"
+			},
+			{
+				"value": "${executor}",
+				"operator": "in",
+				"property": "data.members.executor"
+			},
+			{
+				"property": "data.issueStatus",
+				"dictionaryName": "polus_iss_status"
+			},
+			{
+				"type": "user",
+				"property": "reviewers"
+			},
+			{
+				"value": false,
+				"operator": "eq",
+				"property": "isArchived"
+			},
+			{
+				"value": "{\"id\":\"${pickerId}\"}",
+				"operator": "in",
+				"property": "data.formInstancePicker"
+			},
+			{
+				"value": "${criticality}",
+				"operator": "eq",
+				"property": "data.info.criticality"
+			},
+			{
+				"value": "${stopWork}",
+				"operator": "eq",
+				"property": "data.info.stopWork"
+			},
+			{
+				"value": "${dueDate.start}",
+				"operator": "gte",
+				"property": "data.info.dateTime"
+			},
+			{
+				"value": "${dueDate.end}",
+				"operator": "lte",
+				"property": "data.info.dateTime"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 14,
+			"offset": 0
+		}
+	},
+	"forCreate": {
+		"type": "formInstance",
+		"formId": "623b0f296c5347019d00000c"
+	},
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n  const { id, title, createdDate, reviewers, data } = item;\n  const result = {};\n  const dueDate = data.info.dateTime != 0 ? new Date(data.info.dateTime).toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'long', year: 'numeric'}) : \"Отсутствует\";\n  const dueDateCheck = data.info.dateTime != 0 ? new Date(data.info.dateTime).toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'numeric', year: 'numeric'}) : \"Отсутствует\";\n  result.users =\n    reviewers?.length && reviewers[0].name\n      ? reviewers.map((reviewer) => ({\n          avatar: reviewer.avatar,\n          name: reviewer.name,\n          caption: reviewer.organization\n        }))\n      : [];\n  let responsible = \"\"\n  if (data.members && data.members.responsible && data.members.responsible.length != 0){\n    responsible = \"от \" + data.members.responsible[0].organization;\n  }\n  let executor = \"\"\n  if (data.members && data.members.executor && data.members.executor.length != 0){\n    executor = data.members.executor[0].organization;\n  }\n\n  let nowDate = new Date().toLocaleDateString(\"ru-Ru\",{day: 'numeric', month: 'numeric', year: 'numeric'})\n  \n  let status = \" \";\n  let criticalityChips = (data.info.criticality === \"critical\") ? \"Критичное\" : \" \";\n  let stopWorkChips = (data.info.stopWork === \"yes\") ? \"Остановка работ\" : \" \";\n  \n  let typeofWork = \"Не заполнено\"\n  if (data.info && data.info.typeOfWork && data.info.typeOfWork.length != 0){\n    typeofWork = data.info.typeOfWork[0].name;\n  }\n  \n  let issue_number = \"№\"\n  if (data.numberObject && data.numberObject.number && data.numberObject.number != 0){\n      issue_number = \"№ \" + data.numberObject.number + \"   \";\n  }\n\n  let dateColor = \"dark\"\n  \n  if (data.info.dateTime != 0 && dueDateCheck < nowDate){\n    dateColor = \"error.main\"\n  }\n  else{\n    dateColor = \"dark\"\n  }\n    \n  \n  let org_width = 250\n  \n  if (data.info.criticality === \"critical\" && data.info.stopWork === \"no\") {\n      result.chips = [\n        {\n          icon: \"Error\",\n          value: criticalityChips,\n          placeholder: \"Пусто\",\n          color: \"states.completed\",\n          background: \"action.hover\"\n        },\n        {\n          icon: \"Deadline\",\n          value: dueDate,\n          placeholder: \"Срок устранения отсутствует\",\n          color: dateColor,\n          background: \"action.hover\",\n        }\n      ]\n  }\n  else if(data.info.stopWork === \"yes\"){\n    result.chips = [\n        {\n          icon: \"Error\",\n          value: stopWorkChips,\n          placeholder: \"Пусто\",\n          color: \"error.main\",\n          background: \"action.hover\"\n        },\n        {\n          icon: \"Deadline\",\n          value: dueDate,\n          placeholder: \"Срок устранения отсутствует\",\n          color: dateColor,\n          background: \"action.hover\",\n        }\n      ]\n  } else {\n    org_width = 250\n    result.chips = [\n      {\n        icon: \"Deadline\",\n        value: dueDate,\n        placeholder: \"Срок устранения отсутствует\",\n        color: dateColor,\n        background: \"action.hover\",\n      }\n    ]\n  }\n\n  if (data.issueStatus && data.issueStatus.length != 0) {\n    status = data.issueStatus[0].name;\n    result.icon = {\n      value: data.issueStatus[0].icon,\n      color: data.issueStatus[0].color\n    };\n  }\n\n  return {\n    ...result,\n    id,\n    title: {\n      value: issue_number + typeofWork,\n      placeholder: \"Не заполнено\",\n      color: \"dark\"\n    },\n    description: {\n      value: status,\n      placeholder: \"Описание карточки\"\n    },\n    fields: [\n      {\n        value: responsible,\n        placeholder: \"Организации ответственного\",\n        color: \"dark\",\n        width: org_width\n      },\n      {\n        value: executor,\n        placeholder: \"Организации исполнителя\",\n        color: \"dark\",\n        width: org_width\n      }\n    ]\n  };\n}\n",
+	"published_at": "2022-03-23T12:24:37.626Z",
+	"filters": [
+		{
+			"icon": "Status",
+			"type": "view",
+			"title": "По статусу",
+			"params": {
+				"status": ""
+			},
+			"viewId": "62a0f59498497201a5000de1"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По исполнителю",
+			"params": {
+				"executor": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "User",
+			"type": "view",
+			"title": "По ответственному",
+			"params": {
+				"responsible": ""
+			},
+			"viewId": "629df08e98497201a5000c77"
+		},
+		{
+			"icon": "Project",
+			"type": "view",
+			"title": "По виду работ",
+			"params": {
+				"workType": ""
+			},
+			"viewId": "629dcdda98497201a5000c61"
+		},
+		{
+			"icon": "Calendar",
+			"type": "date",
+			"title": "По сроку устранения",
+			"params": {
+				"dueDate": {
+					"end": "",
+					"start": ""
+				}
+			}
+		},
+		{
+			"icon": "Error",
+			"type": "switch",
+			"title": "Критичное",
+			"params": {
+				"criticality": "critical"
+			}
+		},
+		{
+			"icon": "Error",
+			"type": "switch",
+			"title": "Приостановка работ",
+			"params": {
+				"stopWork": "yes"
+			}
+		}
+	],
+	"relationsData": [],
+	"createdDate": 1648038273483,
+	"updatedDate": 1660917009955,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

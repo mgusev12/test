@@ -1,0 +1,13 @@
+{
+	"id": "628ce59f98497201a5000805",
+	"title": "Polus_Trial_onCreate",
+	"hookType": "onCreate",
+	"function": "function onCreate(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n    let author = []\n\n    response.data.members = {applicant:[user.id], executor:[]};\n    response.data.info = {testType: 'laboratory',laboratory: [], typeOfLaboratory: []};\n    response.data.checkStatus = {applicantStatus: 'notReady'};\n    response.data.dateTime = {dateTimeStart: 0, dateTimeEnd: 0};\n    response.data.areaObject = {area: []};\n    response.data.crCheck = \"1\"\n    return response;\n}",
+	"form": "6260fd3f98497201a500000f",
+	"relationsData": [],
+	"createdDate": 1653400991979,
+	"updatedDate": 1655209937767,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

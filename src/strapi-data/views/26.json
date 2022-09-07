@@ -1,0 +1,37 @@
+{
+	"id": "62ff9e8aa390a201250000e3",
+	"title": "Единицы измерения",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_units",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Template\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-19T14:30:36.083Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1660919434696,
+	"updatedDate": 1661156274876,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

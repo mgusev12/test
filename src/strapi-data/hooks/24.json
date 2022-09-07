@@ -1,0 +1,13 @@
+{
+	"id": "62a8439a98497201a5001024",
+	"title": "Polus_Request_onChange",
+	"hookType": "onChange",
+	"function": "function onChange(props) {\n    const { item, user } = props;\n    const response = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { inspectionRequest, formInstance } = response;\n  \n  if (Object.keys(response.data).length != 0){\n  if (response.data.subcontractor.user && response.data.subcontractor.user.length != 0 && response.data.dateTimeDuration.dateTime != 0 && response.data.dateTimeDuration.duration != 0 && response.data.actAndTypeOfWorkObject && response.data.actAndTypeOfWorkObject.rdCode && response.data.actAndTypeOfWorkObject.rdCode.length != 0 && response.data.actAndTypeOfWorkObject.typeOfWork && response.data.actAndTypeOfWorkObject.typeOfWork.length != 0 && response.data.actAndTypeOfWorkObject.act != '' && response.data.customerRepresentative.user && response.data.customerRepresentative.user.length != 0 && response.data.actAndTypeOfWorkObject.rdAttachments && response.data.actAndTypeOfWorkObject.rdAttachments.length != 0 && response.data.areaObject && response.data.areaObject.area && response.data.areaObject.area.length != 0){\n          \n      }\n      else {\n          delete response.data.subcontractor.selectOne\n          response.data.subcontractor.selectOne = \"notReady\"\n      }\n  }\n  return response;\n}",
+	"form": "6260fd7098497201a5000013",
+	"relationsData": [],
+	"createdDate": 1655194522162,
+	"updatedDate": 1660044496638,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

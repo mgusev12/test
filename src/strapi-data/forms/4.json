@@ -1,0 +1,516 @@
+{
+	"id": "623b0f296c5347019d00000c",
+	"scheme": {
+		"order": [
+			"numberObject",
+			"selectTab",
+			"attachmentsAndComment",
+			"members",
+			"info",
+			"selectTest",
+			"selectRequest",
+			"memberStatus"
+		],
+		"properties": {
+			"info": {
+				"type": "object",
+				"order": [
+					"contraventionObject",
+					"typeOfWork",
+					"criticality",
+					"stopWork",
+					"dateTime",
+					"area",
+					"cafm",
+					"disturbedPoint",
+					"remedialAction"
+				],
+				"properties": {
+					"area": {
+						"type": "dictionary",
+						"title": "Участок *",
+						"isTree": true,
+						"multiple": false,
+						"description": "Выберите участок",
+						"dictionaryName": "polus_area"
+					},
+					"cafm": {
+						"type": "cafm",
+						"title": "Отметка на РД",
+						"viewId": "62e7c6832e0e9a012300040b"
+					},
+					"dateTime": {
+						"type": "date",
+						"title": "Срок устранения *",
+						"helperText": "Срок устранения можно изменять только два раза. После второго изменения редактирование будет недоступно.",
+						"description": "Выберите дату"
+					},
+					"stopWork": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"no"
+								],
+								"type": "string",
+								"title": "Нет"
+							},
+							{
+								"enum": [
+									"yes"
+								],
+								"type": "string",
+								"title": "Да"
+							}
+						],
+						"title": "Требует приостановки работ?",
+						"default": "no",
+						"variant": "button"
+					},
+					"typeOfWork": {
+						"type": "dictionary",
+						"title": "Виды работ *",
+						"description": "Выбрать вид работы",
+						"dictionaryName": "polus_type_of_work"
+					},
+					"criticality": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notCritical"
+								],
+								"type": "string",
+								"title": "Не критичное"
+							},
+							{
+								"enum": [
+									"critical"
+								],
+								"type": "string",
+								"title": "Критичное"
+							}
+						],
+						"title": "Критичность",
+						"default": "notCritical",
+						"variant": "button"
+					},
+					"disturbedPoint": {
+						"type": "dictionary",
+						"title": "Нарушенный пункт НТД",
+						"isTree": true,
+						"multiple": true,
+						"description": "Выберите пункт НТД",
+						"dictionaryName": "disturbed_point"
+					},
+					"remedialAction": {
+						"type": "textarea",
+						"title": "Меры к устранению",
+						"description": "Введите меры к устранению"
+					},
+					"contraventionObject": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"work"
+								],
+								"type": "string",
+								"title": "Работы"
+							},
+							{
+								"enum": [
+									"mtp"
+								],
+								"type": "string",
+								"title": "MTP"
+							}
+						],
+						"title": "Предмет нарушения",
+						"default": "work",
+						"variant": "button"
+					}
+				}
+			},
+			"crCheck": {
+				"type": "text",
+				"hidden": true
+			},
+			"members": {
+				"type": "object",
+				"order": [
+					"responsible",
+					"executor",
+					"eliminationResponsible"
+				],
+				"properties": {
+					"executor": {
+						"type": "user",
+						"title": "Исполнитель *"
+					},
+					"responsible": {
+						"type": "user",
+						"title": "Ответственный"
+					},
+					"eliminationResponsible": {
+						"type": "user",
+						"title": "Ответственный за устранение"
+					}
+				}
+			},
+			"exitTime": {
+				"type": "datetime",
+				"hidden": true
+			},
+			"dateCheck": {
+				"type": "object",
+				"properties": {
+					"oldDate": {
+						"type": "date",
+						"hidden": true
+					},
+					"dateCount": {
+						"type": "number",
+						"hidden": true
+					}
+				}
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"test",
+					"request",
+					"process"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Испытания",
+					"Приёмка работ",
+					"Процесс устранения"
+				]
+			},
+			"selectTest": {
+				"type": "object",
+				"properties": {
+					"test": {
+						"type": "view",
+						"title": "Испытания",
+						"viewId": "627cc46b98497201a50003e9",
+						"multiple": true,
+						"canCreate": true,
+						"description": "Выберите испытание"
+					}
+				}
+			},
+			"issueStatus": {
+				"type": "dictionary",
+				"title": "status",
+				"hidden": true,
+				"dictionaryName": "polus_iss_status"
+			},
+			"memberStatus": {
+				"type": "object",
+				"order": [
+					"responsibleStatus",
+					"executorStatus",
+					"whatEliminate",
+					"eliminationConfirmation",
+					"close"
+				],
+				"properties": {
+					"close": {
+						"type": "checkboxes",
+						"items": {
+							"enum": [
+								1
+							],
+							"type": "number",
+							"enumNames": [
+								"Да, закрыть"
+							]
+						},
+						"title": "Закрыть замечание?",
+						"hidden": true,
+						"minItems": 0,
+						"readOnly": false,
+						"helperText": "После закрытия замечания нельзя будет редактировать"
+					},
+					"whatEliminate": {
+						"type": "textarea",
+						"title": "Что было устранено",
+						"hidden": true,
+						"description": "Опишите, что было устранено"
+					},
+					"executorStatus": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notIssued"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не устранено"
+							},
+							{
+								"enum": [
+									"issued"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Устранено"
+							}
+						],
+						"title": "Статус исполнителя",
+						"hidden": true,
+						"variant": "button",
+						"readOnly": true
+					},
+					"responsibleStatus": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notIssued"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не выдано"
+							},
+							{
+								"enum": [
+									"issued"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Выдано",
+								"readOnly": true
+							}
+						],
+						"title": "Статус ответственного",
+						"variant": "button",
+						"helperText": "Чтобы исполнителю пришло уведомление о вашем замечание, измените статус на «Выдано». Для этого нужно заполнить все обязательные поля(*). Если вы пока не можете это сделать, сохраните заявку в статусе «Не выдано» и завершите заполнение позже."
+					},
+					"eliminationConfirmation": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notIssued"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не подтверждено"
+							},
+							{
+								"enum": [
+									"issued"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": "Подтверждение устранения",
+						"hidden": true,
+						"variant": "button",
+						"readOnly": true
+					}
+				}
+			},
+			"numberObject": {
+				"type": "object",
+				"properties": {
+					"number": {
+						"type": "number",
+						"title": "Номер замечания",
+						"description": "Введите номер замечания"
+					}
+				}
+			},
+			"executorCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"selectRequest": {
+				"type": "object",
+				"properties": {
+					"request": {
+						"type": "view",
+						"title": "Приёмка работ",
+						"viewId": "627cc1be98497201a50003db",
+						"multiple": true,
+						"canCreate": false,
+						"description": "Выберите работу"
+					}
+				}
+			},
+			"responsibleCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"attachmentsAndComment": {
+				"type": "object",
+				"order": [
+					"attachments",
+					"comment"
+				],
+				"properties": {
+					"comment": {
+						"type": "textarea",
+						"title": "Описание",
+						"description": "Введите описание"
+					},
+					"attachments": {
+						"type": "attachments",
+						"title": "Вложения"
+					}
+				}
+			}
+		}
+	},
+	"title": "Замечания",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-03-23T12:23:50.964Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"623b0f296c5347019d00000c_630dc46c0036734097447ec7": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_630d2499000da640855d4d5d": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_630c76a2035b13408d53c16e": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6308b10400b44140bc6e0e0b": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6308ab1100381140ac906c8a": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_63089f900079b740a19f7715": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_63061e9800ef33408bf9705a": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6306038d4de77240b599d89a": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6305d5d5007894409406fd16": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6304dc2b00f58c40b459c238": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6304d9fe22b28140a85eb0c3": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6304c97300cb8f40a3168e7c": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_6304978b00866740ae4d1c42": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_63048ad300295140900aa9ed": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_63032e4700a23f40b3219a17": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62fdfc13312d69408ef30580": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62fe007e002d8e409814f368": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62fbb2d314183840bbde56ca": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f4af2300d40e4097c66edf": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f3a34f00bdc840bffd27fa": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f3a321009b8440a6e6b22f": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f39eb102c4d640935efd34": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f39a52028ede40bbe8a513": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f24c9a00e42140b3f1df2f": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f2494000d6c640a55481f4": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f247270061da4099c76aa8": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f2488f00531b40857156a2": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f2465a00b63540bf41b113": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f23fa10025b540865891f0": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f237ee00ba4d408b377a49": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f22cf8005bde40a7066be8": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62f117b8361b6840aff7cd05": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb997a00930840afd5645f": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb8cd60044f2409850b496": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb6925000f2840955aaf53": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb64f0005e2e4091a1ee3b": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb602e00c1ab40b24460b1": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62ea4b5d58d1a54092e49e96": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62e91125633e6c408564f149": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62e8fdc61262e6408ffa6d50": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62e8fcc0122bcd4082231d3a": {
+			"RELATED_TO": true
+		},
+		"623b0f296c5347019d00000c_62e8fbad12f28e40b596e457": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1648037673285,
+	"updatedDate": 1661160268997,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

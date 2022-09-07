@@ -1,0 +1,13 @@
+{
+	"id": "62f289a22e0e9a0123000ad9",
+	"title": "test_ViewUpdate",
+	"hookType": "viewUpdate",
+	"function": "function viewUpdate(props) {\n  const { user, item, form, isCreation = false } = props;\n  const formInstance = item;\n  const formCopy = Object.assign(Object.create(Object.getPrototypeOf(form)), form);\n\n  /*if (formCopy.scheme.properties.testViewDisplay.variables.number !== formInstance.data.number) {     \n    formCopy.scheme.properties.testViewDisplay.variables.number = Math.max(formInstance.data.number) +1\n        }\n  //let num = Math.max(formCopy.scheme.properties.testViewDisplay.variables.number)\n\n  console.warn(\"viewUpdate\", formCopy.scheme.properties.testViewDisplay);*/\n  console.log(formCopy);\n  return formCopy;\n}\n\n",
+	"form": "62f284762e0e9a0123000ac3",
+	"relationsData": [],
+	"createdDate": 1660062114397,
+	"updatedDate": 1660728688745,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

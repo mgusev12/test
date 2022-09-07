@@ -1,0 +1,32 @@
+{
+	"id": "62e8e3af2e0e9a0123000452",
+	"title": "Тест статусы",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_iss_status",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-02T08:43:30.622Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659429807878,
+	"updatedDate": 1659429876186,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

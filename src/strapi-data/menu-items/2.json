@@ -1,0 +1,14 @@
+{
+	"id": "62666a7b98497201a5000046",
+	"icon": "Inbox",
+	"name": "Приёмка работ",
+	"viewId": "627cc1be98497201a50003db",
+	"order": 2,
+	"published_at": "2022-05-12T08:14:39.840Z",
+	"relationsData": [],
+	"createdDate": 1650879099638,
+	"updatedDate": 1654004618632,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

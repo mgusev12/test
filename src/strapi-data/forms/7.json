@@ -1,0 +1,339 @@
+{
+	"id": "6266689498497201a5000040",
+	"scheme": {
+		"order": [
+			"selectTab",
+			"numberOfContract",
+			"constractionObject",
+			"rdCode",
+			"instances",
+			"jobCategory",
+			"dateTime",
+			"duration",
+			"typeOfWorkPresented",
+			"forge",
+			"structuralElement",
+			"executiveDocumentations",
+			"workingDocumentations",
+			"description",
+			"volume",
+			"selectVariantsB",
+			"measurementUnits",
+			"reasonForRejection",
+			"comment",
+			"customer",
+			"subcontractor",
+			"contractor",
+			"generalContractor",
+			"authorSupervision"
+		],
+		"required": [],
+		"properties": {
+			"forge": {
+				"type": "forge",
+				"title": "Forge"
+			},
+			"rdCode": {
+				"type": "text",
+				"title": "Шифр РД",
+				"description": "Введите шифр РД"
+			},
+			"volume": {
+				"type": "number",
+				"title": "Объем",
+				"description": "Введите объем"
+			},
+			"comment": {
+				"type": "textarea",
+				"title": "Комментарий",
+				"description": "Введите комментарий"
+			},
+			"customer": {
+				"type": "object",
+				"title": "Заказчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь",
+						"filters": {
+							"organizationId": "61c59e9796029165c983083f"
+						}
+					},
+					"forge": {
+						"type": "forge",
+						"title": "Forge"
+					},
+					"typeOfWorks": {
+						"type": "dictionary",
+						"title": "Вид предъявляемой работы2",
+						"description": "Выберите вид предъявляемой работы",
+						"dictionaryName": "dev_ok_type_of_work"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"dateOfControl": {
+						"type": "date",
+						"title": "Дата проведения контроля"
+					}
+				}
+			},
+			"dateTime": {
+				"type": "datetime",
+				"title": "Дата и время приемки",
+				"helperText": "Желаемая дата и время приёмки: 29 ноя 2021 с 9:00 – 11:00",
+				"description": "Дата и время не установлены"
+			},
+			"duration": {
+				"enum": [
+					15,
+					30,
+					60
+				],
+				"type": "select",
+				"title": "Длительность приёмки",
+				"enumNames": [
+					"15 минут",
+					"30 минут",
+					"1 час"
+				]
+			},
+			"instances": {
+				"type": "view",
+				"title": "Испытания",
+				"viewId": "627cc46b98497201a50003e9",
+				"multiple": false,
+				"description": "Выберите испытания"
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"documentation",
+					"inspection",
+					"result"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Документация",
+					"Комиссия",
+					"Результат приемки"
+				]
+			},
+			"contractor": {
+				"type": "object",
+				"title": "Подрядчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь",
+						"filters": {
+							"organizationId": "602ba41bf589151a362ac9e8"
+						},
+						"multiple": true
+					},
+					"plannedDate": {
+						"type": "date",
+						"title": "Планируемая дата"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					}
+				}
+			},
+			"description": {
+				"type": "textarea",
+				"title": "Описание",
+				"description": "Введите описание"
+			},
+			"jobCategory": {
+				"enum": [
+					"СМР",
+					"Документация",
+					"Геодезия",
+					"Экология",
+					"Охрана труда"
+				],
+				"type": "select",
+				"title": "Категория предъявляемой работы",
+				"hidden": false
+			},
+			"subcontractor": {
+				"type": "object",
+				"title": "Субподрядчик",
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь",
+						"multiple": true
+					},
+					"plannedDate": {
+						"type": "date",
+						"title": "Планируемая дата"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					}
+				}
+			},
+			"selectVariantsB": {
+				"type": "radio",
+				"anyOf": [
+					{
+						"enum": [
+							"1"
+						],
+						"type": "string",
+						"title": "Отменено"
+					},
+					{
+						"enum": [
+							"2"
+						],
+						"type": "string",
+						"color": "success.main",
+						"title": "Готов к приёмке"
+					},
+					{
+						"enum": [
+							"3"
+						],
+						"type": "string",
+						"color": "error.main",
+						"title": "Не готов к приемке"
+					}
+				],
+				"title": "Проверить variant:button:",
+				"variant": "button",
+				"helperText": "The MuiInputLabel name can be used for providing default props or style overrides at the theme level. Morbi ex urna, vulputate id elementum in, rutrum vitae neque. Etiam molestie sit amet lectus quis interdum. Praesent accumsan urna at ante efficitur congue."
+			},
+			"measurementUnits": {
+				"enum": [
+					"м",
+					"м2",
+					"м3",
+					"см",
+					"см2",
+					"см3",
+					"мм",
+					"мм2",
+					"мм3"
+				],
+				"type": "select",
+				"title": "Единицы измерения",
+				"hidden": true,
+				"description": "Единицы измерения объема"
+			},
+			"numberOfContract": {
+				"type": "text",
+				"title": "Номер договора",
+				"maxLength": 50,
+				"minLength": 3,
+				"description": "Введите номер договора"
+			},
+			"authorSupervision": {
+				"type": "object",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"dateOfControl": {
+						"type": "date",
+						"title": "Дата проведения контроля"
+					}
+				}
+			},
+			"generalContractor": {
+				"type": "object",
+				"title": "Генподрядчик",
+				"default": {},
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Пользователь"
+					},
+					"organization": {
+						"type": "text",
+						"title": "Организация",
+						"description": "Введите наименование организации"
+					},
+					"confirmationDate": {
+						"type": "date",
+						"title": "Дата подтверждения"
+					}
+				}
+			},
+			"structuralElement": {
+				"type": "text",
+				"title": "Конструктивный элемент"
+			},
+			"constractionObject": {
+				"type": "dictionary",
+				"title": "Объект строительства1",
+				"multiple": true,
+				"description": "Выберите объект строительства",
+				"dictionaryName": "dev_ok_construction_object"
+			},
+			"reasonForRejection": {
+				"enum": [
+					"Нет строительной готовности",
+					"Нет доступа",
+					"Брак"
+				],
+				"type": "select",
+				"title": "Причина отклонения"
+			},
+			"typeOfWorkPresented": {
+				"type": "dictionary",
+				"title": "Вид предъявляемой работы",
+				"multiple": true,
+				"description": "Выберите вид предъявляемой работы",
+				"dictionaryName": "dev_ok_ctw"
+			},
+			"hierarchicalDirectory": {
+				"type": "dictionary",
+				"title": "Иерархический справочник",
+				"multiple": true,
+				"description": "Выберите пункт из списка",
+				"dictionaryName": "dev_ok_test_nesting"
+			},
+			"workingDocumentations": {
+				"type": "attachments",
+				"title": "Перечень РД"
+			},
+			"executiveDocumentations": {
+				"type": "attachments",
+				"title": "Перечень ИД"
+			}
+		}
+	},
+	"title": "Mikheeva test form",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-05-19T12:02:55.556Z",
+	"fieldsForMappedTable": null,
+	"tags": [],
+	"relationsData": [],
+	"createdDate": 1650878612291,
+	"updatedDate": 1652962658655,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

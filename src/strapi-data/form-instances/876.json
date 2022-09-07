@@ -1,0 +1,71 @@
+{
+	"id": "630dab280421754097d2a870",
+	"formId": "6260fd7098497201a5000013",
+	"data": {
+		"crCheck": "1",
+		"areaObject": {
+			"area": [
+				"392a4ac5-d3da-49b3-aed8-61b45152f5a2"
+			]
+		},
+		"numberObject": {
+			"number": "2"
+		},
+		"requestStatus": [
+			"draft"
+		],
+		"subcontractor": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2",
+			"selectOne": "notReady"
+		},
+		"dateTimeDuration": {
+			"dateTime": 1662012908000,
+			"duration": [
+				"6dc6a16f-f518-4671-a27c-96745944557e"
+			]
+		},
+		"actAndTypeOfWorkObject": {
+			"act": "7878",
+			"rdCode": [
+				"746b97f8-2ef4-4b6d-8a79-94162423e460"
+			],
+			"typeOfWork": [
+				"f6d4d3a5-79a5-47e8-b402-98d73eed4235"
+			],
+			"rdAttachments": [
+				"630dab5e044165408cca62db"
+			]
+		},
+		"customerRepresentative": {
+			"user": [
+				"6239bd3deef71301bcc56ab2"
+			],
+			"check": "6239bd3deef71301bcc56ab2"
+		},
+		"representativeDesignerSupervisor": {
+			"check": "representativeDesignerSupervisor"
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_630dab280421754097d2a870": {
+			"ASSIGNED_TO": true
+		},
+		"6260fd7098497201a5000013_630dab280421754097d2a870": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1661840236852,
+	"updatedDate": 1661840236852,
+	"assignedTo": "6239bd3deef71301bcc56ab2",
+	"parent": null
+}

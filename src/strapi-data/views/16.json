@@ -1,0 +1,37 @@
+{
+	"id": "62e7c6832e0e9a012300040b",
+	"title": "cafm view {tree}",
+	"class": "tree",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_rd",
+				"operator": "eq",
+				"property": "dictionaryType"
+			},
+			{
+				"value": "${ids}",
+				"operator": "in",
+				"property": "id"
+			}
+		],
+		"pagination": {
+			"limit": 200,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-08-01T12:26:53.016Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1659356803074,
+	"updatedDate": 1659515713113,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

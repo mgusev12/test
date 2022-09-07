@@ -1,0 +1,73 @@
+{
+	"id": "62eb8cd60044f2409850b496",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"246d86dd-d078-4e4b-9f04-fbd636b72849"
+			],
+			"dateTime": 1659690640000,
+			"stopWork": "no",
+			"typeOfWork": [
+				"f6d4d3a5-79a5-47e8-b402-98d73eed4235"
+			],
+			"criticality": "notCritical",
+			"contraventionObject": "work"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"628b7c8217562056fee363c0"
+			],
+			"responsible": [
+				"62eb8c09cb0eeb1d34ca79b3"
+			]
+		},
+		"exitTime": 1659604510062,
+		"dateCheck": {
+			"oldDate": 1659690640000,
+			"dateCount": 1
+		},
+		"issueStatus": [
+			"closed"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"close": [
+				1
+			],
+			"whatEliminate": "Что-то",
+			"executorStatus": "issued",
+			"responsibleStatus": "issued",
+			"eliminationConfirmation": "issued"
+		},
+		"numberObject": {
+			"number": "348"
+		},
+		"executorCheck": "628b7c8217562056fee363c0",
+		"responsibleCheck": "62eb8c09cb0eeb1d34ca79b3"
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"62eb8c09cb0eeb1d34ca79b3",
+		"628b7c8217562056fee363c0"
+	],
+	"relationsData": {
+		"628b7c8217562056fee363c0_62eb8cd60044f2409850b496": {
+			"ASSIGNED_TO": true
+		},
+		"62eb8c09cb0eeb1d34ca79b3_62eb8cd60044f2409850b496": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62eb8cd60044f2409850b496": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1659604236545,
+	"updatedDate": 1659604510136,
+	"assignedTo": "62eb8c09cb0eeb1d34ca79b3",
+	"parent": null
+}

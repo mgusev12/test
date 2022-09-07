@@ -1,0 +1,13 @@
+{
+	"id": "6294a39d98497201a5000953",
+	"title": "Polus_Request_canDelete",
+	"hookType": "canDelete",
+	"function": "function canDelete(props) {\n   const { item, user } = props;\n   let flag_p = false;\n   const user_ID = user.id;\n   console.log(item);\n   if (item.data.subcontractor.user) {\n         if (user_ID.includes(item.data.subcontractor.user)) {\n            flag_p = true;\n         }\n    }\n  \n   return flag_p;\n}",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1653908381985,
+	"updatedDate": 1655906983059,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

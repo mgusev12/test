@@ -1,0 +1,32 @@
+{
+	"id": "629f3c1898497201a5000cc6",
+	"title": "Участок",
+	"class": "list",
+	"query": {
+		"sort": [],
+		"type": "dictionary",
+		"query": [
+			{
+				"value": "polus_area",
+				"operator": "eq",
+				"property": "dictionaryType"
+			}
+		],
+		"pagination": {
+			"limit": 12,
+			"offset": 0
+		}
+	},
+	"forCreate": null,
+	"settings": null,
+	"isArchived": false,
+	"map": "function hook(item) {\n    const { id, name } = item;\n    return {\n        id,\n        icon: {\n            value: \"Project\",\n        },\n        title: {\n            value: name,\n            placeholder: \"Название карточки\",\n        },\n    };\n}",
+	"published_at": "2022-06-07T11:52:58.865Z",
+	"filters": null,
+	"relationsData": [],
+	"createdDate": 1654602776840,
+	"updatedDate": 1654602778883,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

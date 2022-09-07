@@ -1,0 +1,434 @@
+{
+	"id": "6260fd7098497201a5000013",
+	"scheme": {
+		"order": [
+			"numberObject",
+			"selectTab",
+			"dateTimeDuration",
+			"areaObject",
+			"actAndTypeOfWorkObject",
+			"customerRepresentative",
+			"representativeDesignerSupervisor",
+			"attachmentsAndComment",
+			"result",
+			"selectTest",
+			"subcontractor"
+		],
+		"properties": {
+			"result": {
+				"type": "object",
+				"order": [
+					"selectOne",
+					"rejectReason",
+					"otherReason",
+					"close"
+				],
+				"properties": {
+					"close": {
+						"type": "checkboxes",
+						"items": {
+							"enum": [
+								1
+							],
+							"type": "number",
+							"enumNames": [
+								"Да, завершить"
+							]
+						},
+						"title": "Завершить приёмку работ?",
+						"hidden": false,
+						"minItems": 0,
+						"readOnly": false,
+						"helperText": "После закрытия приёмку работ нельзя будет редактировать."
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"rejected"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не приняты"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Приняты"
+							}
+						],
+						"title": "Работы приняты?",
+						"variant": "button"
+					},
+					"otherReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"helperText": "Чтобы отклонить освидетельствование, необходимо описать причину",
+						"description": "Указана другая причина отклонения"
+					},
+					"rejectReason": {
+						"type": "dictionary",
+						"title": "Причина отклонения",
+						"hidden": true,
+						"multiple": false,
+						"description": "Выберите причину",
+						"dictionaryName": "polus_reasons_for_rejection"
+					}
+				}
+			},
+			"crCheck": {
+				"type": "textarea",
+				"hidden": true
+			},
+			"selectTab": {
+				"enum": [
+					"description",
+					"inspection",
+					"test",
+					"issue",
+					"result"
+				],
+				"type": "buttonSwitcher",
+				"hidden": false,
+				"enumNames": [
+					"Описание",
+					"Комиссия",
+					"Испытания",
+					"Замечания",
+					"Результат"
+				]
+			},
+			"areaObject": {
+				"type": "object",
+				"properties": {
+					"area": {
+						"type": "dictionary",
+						"title": "Участок *",
+						"isTree": true,
+						"multiple": false,
+						"description": "Выберите участок",
+						"dictionaryName": "polus_area"
+					}
+				}
+			},
+			"selectTest": {
+				"type": "object",
+				"properties": {
+					"test": {
+						"type": "view",
+						"title": "Испытания",
+						"viewId": "627cc46b98497201a50003e9",
+						"multiple": true,
+						"canCreate": true,
+						"description": "Выберите испытание"
+					}
+				}
+			},
+			"selectIssue": {
+				"type": "object",
+				"properties": {
+					"issue": {
+						"type": "view",
+						"title": "Замечания",
+						"viewId": "623b11816c5347019d00001c",
+						"multiple": true,
+						"canCreate": true,
+						"description": "Выберите замечание"
+					}
+				}
+			},
+			"numberObject": {
+				"type": "object",
+				"properties": {
+					"number": {
+						"type": "text",
+						"title": "Номер приёмки работ",
+						"description": "Введите приёмки работ"
+					}
+				}
+			},
+			"requestStatus": {
+				"type": "dictionary",
+				"title": "status",
+				"hidden": true,
+				"dictionaryName": "polus_req_status"
+			},
+			"subcontractor": {
+				"type": "object",
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Представитель генподрядчика"
+					},
+					"check": {
+						"type": "textarea",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"notReady"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Не готов к приёмке"
+							},
+							{
+								"enum": [
+									"ready"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Готов к приёмке"
+							}
+						],
+						"title": " ",
+						"default": "notReady",
+						"variant": "button",
+						"helperText": "Чтобы ваша заявка отправилась на рассмотрение, измените статус на «Готов к приёмке». Для этого нужно заполнить все обязательные поля. Если вы пока не можете это сделать, сохраните заявку в статусе «Не готов к приёмке» и завершите заполнение позже."
+					}
+				}
+			},
+			"dateTimeDuration": {
+				"type": "object",
+				"order": [
+					"number",
+					"dateTime",
+					"duration"
+				],
+				"properties": {
+					"dateTime": {
+						"type": "datetime",
+						"title": "Дата и время приёмки *",
+						"description": "Выберите дату и время"
+					},
+					"duration": {
+						"type": "dictionary",
+						"title": "Продолжительность *",
+						"multiple": false,
+						"description": "Выберите продолжительность",
+						"dictionaryName": "polus_durations"
+					}
+				}
+			},
+			"attachmentsAndComment": {
+				"type": "object",
+				"order": [
+					"attachments",
+					"comment"
+				],
+				"properties": {
+					"comment": {
+						"type": "textarea",
+						"title": "Описание",
+						"description": "Введите описание"
+					},
+					"attachments": {
+						"type": "attachments",
+						"title": "Вложения"
+					}
+				}
+			},
+			"actAndTypeOfWorkObject": {
+				"type": "object",
+				"order": [
+					"act",
+					"typeOfWork",
+					"rdCode"
+				],
+				"properties": {
+					"act": {
+						"type": "text",
+						"title": "Акт освидетельствования *",
+						"description": "Введите номер акта"
+					},
+					"rdCode": {
+						"type": "dictionary",
+						"title": "Шифр РД *",
+						"multiple": true,
+						"description": "Выбрать шифр РД",
+						"dictionaryName": "polus_rd_code"
+					},
+					"typeOfWork": {
+						"type": "dictionary",
+						"title": "Виды работ *",
+						"multiple": false,
+						"description": "Выбрать вид работы",
+						"dictionaryName": "polus_type_of_work"
+					},
+					"rdAttachments": {
+						"type": "attachments",
+						"title": "РД*"
+					}
+				}
+			},
+			"customerRepresentative": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne",
+					"rejectReason",
+					"otherReason"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Представитель заказчика *"
+					},
+					"check": {
+						"type": "textarea",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"rejected"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					},
+					"otherReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"helperText": "Чтобы отклонить участие, необходимо описать причину",
+						"description": "Указана другая причина отклонения"
+					},
+					"rejectReason": {
+						"type": "dictionary",
+						"title": "Причина отклонения",
+						"hidden": true,
+						"multiple": false,
+						"description": "Выберите причину",
+						"dictionaryName": "polus_reasons_for_rejection"
+					}
+				}
+			},
+			"representativeDesignerSupervisor": {
+				"type": "object",
+				"order": [
+					"user",
+					"selectOne",
+					"rejectReason",
+					"otherReason"
+				],
+				"properties": {
+					"user": {
+						"type": "user",
+						"title": "Представитель авторского надзора"
+					},
+					"check": {
+						"type": "textarea",
+						"hidden": true
+					},
+					"selectOne": {
+						"type": "radio",
+						"anyOf": [
+							{
+								"enum": [
+									"rejected"
+								],
+								"type": "string",
+								"color": "error.main",
+								"title": "Отклонено"
+							},
+							{
+								"enum": [
+									"accept"
+								],
+								"type": "string",
+								"color": "success.main",
+								"title": "Подтверждено"
+							}
+						],
+						"title": " ",
+						"variant": "button"
+					},
+					"otherReason": {
+						"type": "textarea",
+						"title": "Описание причины",
+						"hidden": true,
+						"helperText": "Чтобы отклонить участие, необходимо описать причину",
+						"description": "Указана другая причина отклонения"
+					},
+					"rejectReason": {
+						"type": "dictionary",
+						"title": "Причина отклонения",
+						"hidden": true,
+						"multiple": false,
+						"description": "Выберите причину",
+						"dictionaryName": "polus_reasons_for_rejection"
+					}
+				}
+			}
+		}
+	},
+	"title": "Приёмка работ",
+	"description": null,
+	"isArchived": false,
+	"code": null,
+	"published_at": "2022-04-21T06:45:06.516Z",
+	"fieldsForMappedTable": null,
+	"tags": [
+		"623aed6d0d2612019c000003"
+	],
+	"relationsData": {
+		"6260fd7098497201a5000013_630dab280421754097d2a870": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_6304912500616040b2cb120d": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_6304834900729c4091627412": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_63037d540033c6408189ddc5": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62ff6ffe00d5ae40869b0b3e": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62fb98820081e4408cb1ca99": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62f259d000ed2c40af832cc6": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62f2504a00821c4090815358": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62f24e3600ad1f40a4029cd9": {
+			"RELATED_TO": true
+		},
+		"6260fd7098497201a5000013_62f23643003dd9409fcc568d": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1650523504696,
+	"updatedDate": 1660806366284,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

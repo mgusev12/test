@@ -1,0 +1,13 @@
+{
+	"id": "623b10176c5347019d000012",
+	"title": "onChange schedule date",
+	"hookType": "onChange",
+	"function": "function onChange(props) {\n  const { item, user } = props;\n  const formCopy = Object.assign(\n    Object.create(Object.getPrototypeOf(item)),\n    item\n  );\n  const { inspectionRequest, formInstance } = formCopy;\n  const { data } = formInstance;\n\n  if (\n    Object.keys(formInstance.data).length != 0 &&\n    formInstance.data.memberStatus.responsibleStatus === \"issued\"\n  ) {\n    formCopy.scheme.properties.members.required = [\"responsible\", \"executor\"];\n    formCopy.scheme.properties.info.required = [\"typeOfWork\", \"dateTime\"];\n    formCopy.scheme.properties.memberStatus.properties.executorStatus.readOnly = false;\n    if (\n      Object.keys(formInstance.data).length != 0 &&\n      formInstance.data.memberStatus.executorStatus === \"issued\"\n    ) {\n      formCopy.scheme.properties.memberStatus.properties.eliminationConfirmation.readOnly = false;\n    } else if (\n      Object.keys(formInstance.data).length != 0 &&\n      formInstance.data.memberStatus.executorStatus === \"notIssued\"\n    ) {\n      formCopy.scheme.properties.memberStatus.properties.eliminationConfirmation.readOnly = true;\n    }\n  } else if (\n    Object.keys(formInstance.data).length != 0 &&\n    formInstance.data.memberStatus.responsibleStatus === \"notIssued\"\n  ) {\n    formCopy.scheme.properties.members.required = [];\n    formCopy.scheme.properties.info.required = [];\n    //formCopy.scheme.properties.memberStatus.properties.executorStatus.readOnly = true;\n    //formCopy.scheme.properties.memberStatus.properties.eliminationConfirmation.readOnly = true;\n    delete formInstance.data.memberStatus.executorStatus;\n    delete formInstance.data.memberStatus.eliminationConfirmation;\n  }\n\n  return response;\n}\n",
+	"form": null,
+	"relationsData": [],
+	"createdDate": 1648037911473,
+	"updatedDate": 1652276777437,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

@@ -1,0 +1,13 @@
+{
+	"id": "628635d198497201a5000705",
+	"title": "onChange Mikheeva test form",
+	"hookType": "onChange",
+	"function": "function onChange(props) {\n    const { item, user } = props;\n    const formInstance = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const { data } = formInstance;\n\n    if (data.numberOfContract) {\n        formInstance.title = data.numberOfContract;\n    }\n    if (data.rdCode) {\n        formInstance.description = data.rdCode;\n    }\n    \n    return formInstance;\n}\n",
+	"form": "6266689498497201a5000040",
+	"relationsData": [],
+	"createdDate": 1652962769824,
+	"updatedDate": 1652962769832,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

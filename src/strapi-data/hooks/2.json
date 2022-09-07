@@ -1,0 +1,13 @@
+{
+	"id": "623b0fef6c5347019d000010",
+	"title": "canDelete schedule",
+	"hookType": "canDelete",
+	"function": "function canDelete(props) {\n        const { item, user } = props;\n// console.log(props);\n        return user.id === item.inspectionRequest.owner;\n}",
+	"form": "623b0a386c5347019d000004",
+	"relationsData": [],
+	"createdDate": 1648037871331,
+	"updatedDate": 1648037871341,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

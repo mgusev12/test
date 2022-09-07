@@ -1,0 +1,13 @@
+{
+	"id": "62ecd0172e0e9a0123000839",
+	"title": "canSave",
+	"hookType": "canSave",
+	"function": null,
+	"form": "623b0f296c5347019d00000c",
+	"relationsData": [],
+	"createdDate": 1659686935309,
+	"updatedDate": 1659686935318,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

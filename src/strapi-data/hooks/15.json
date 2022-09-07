@@ -1,0 +1,13 @@
+{
+	"id": "6286365998497201a5000712",
+	"title": "onSave Mikheeva test form",
+	"hookType": "onSave",
+	"function": "function onSave(props) {\n    const { item, user } = props;\n    console.log(\"onSave\", props);\n    //const formInstance = Object.assign(Object.create(Object.getPrototypeOf(item)), item);\n    const formInstance = {...item};\n    const { data } = formInstance;\n    const fields = [\"authorSupervision.user\", \"contractor.user\", \"customer.user\", \"generalContractor.user\", \"subcontractor.user\"];\n\tlet reviewers = new Set();\n\n    delete formInstance.data.selectTab;\n\n    fields.forEach(field => {\n        const val = field.split('.').reduce((p,c) => p && p[c], data);\n        if (val) {\n\t\t\tval.forEach((userId) => reviewers.add(userId));\n        }\n    });\n    formInstance.reviewers = Array.from(reviewers);\n    \n    return formInstance;\n}",
+	"form": "6266689498497201a5000040",
+	"relationsData": [],
+	"createdDate": 1652962905996,
+	"updatedDate": 1652962906006,
+	"owner": null,
+	"assignedTo": null,
+	"parent": null
+}

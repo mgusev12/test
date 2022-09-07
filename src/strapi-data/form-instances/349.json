@@ -1,0 +1,61 @@
+{
+	"id": "62ebca674d44c540a8f006eb",
+	"formId": "623b0ef86c5347019d00000a",
+	"data": {
+		"cafm": {
+			"pin": {
+				"h": 42,
+				"w": 28,
+				"id": "62ebca6c20c8c0408f471567",
+				"name": "anno-image",
+				"angle": 0,
+				"image": {},
+				"bounds": {
+					"left-top": {
+						"x": 1152.6666259765625,
+						"y": 421.9166564941406
+					},
+					"right-bottom": {
+						"x": 1180.6666259765625,
+						"y": 463.9166564941406
+					}
+				},
+				"points": [
+					{
+						"x": 1152.6666259765625,
+						"y": 421.9166564941406
+					}
+				],
+				"styles": {
+					"fillStyle": "rgb(255,0,0)",
+					"lineWidth": 2,
+					"strokeStyle": "rgb(255,0,0)"
+				},
+				"imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAuCAYAAABJcBuEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQnSURBVHgBxVg9TBRBFH57eP4AJmdiYiWe2GAhgliICeFI/GkhlpggBVJYKJhoMCZCNBpMVCxMjBZQaGdyUGMCSEGjCcFCGuHAymjCRYGA/Kzvm5s55o7d2d3LHXzJY4bd2/m+eTvvzZu1yCds245w08hWz1bFFmWLyNtJtgTbJNsY26BlWUnKB5g4yvaCbcEOhn486zW+ZSDG7G6ydatrG9NTtPZ5gjbnZ2hj/jvZy0upQYpLqOjYCQodLafw2VoqqqjUh+pmb/QEEiCVxynlalobH6bV+Hva/P2T/CB0+Ajta2qmcN1FdSnB1sBCEp4CJPkIWxSEK2+e0zrPPBdASMm9XrK4dRNhuZKzi5ce3027OVfg9RR3PeVXVO4oIlvAbD7JXURMsoBqdS+kkT8g6fblvod5Ixdj81jLT+6QnVpDVczVnRYnyaPcYPa0dP8Gr/AZKgSKTlZSSVcvusgRx5Er9sh7mL1Y7X7I91ScohCHXVGZcKmIjrXxj55RsvFtSnBwdCDEbxFCFDeQZLiJLHZeMw6Cd7m/7TaFa2od7/sJ12wvhJgc6TWCJGN6ECFV+uiVKzmAuC9G2LFQN8ALMqzhhSoswphQ/2WCTEBikfFsBITCSyZAhEQjBJxGb3NuxjioltU8AS9lpeMMrE9/Vd16CBDp1uT+cN0FCgoZ846wf6W5IhAQ8RIQ8uH6bQLK3AVoXNEQ7TIgQBQOxpU7FzwxeYWzRDItwOTmjR/BBSAxuQrY4kpAwJgQYFg0IoN5hGkm+bA5GXEWlZiDANRxnF4ryYSVt8/UZmIEiJENTQifOae6gxAwIATUnDeuA+xo2KIxOzess5ewmXlFFLgkRtVegCIkthp/56leDYLcoNYNFinqRD+VExLagbbOFLllNSgBMW5GMMvFzpa81gLZwrUSDZXRqMgD6AhF/Ar2NbdToaDtJ4OSk/RE1MqW3Msuwg8LQS73E4R9h7qeFiALxY7Uj6/mVQTGwpgSHXpRmpGK+cYANz35FLGfX6lG3iM5tjidHpJFoyjTRJHK4ef3UKIg6oLrnXp+wcz7sn9nOpphm8bpKIr//YYoAM/tvdyk8kqCrVUtOt8CpIgopc6GLfjfyxsOs35JqbOh60nZKEATEuOmn+S5AdkuO1c4HMNcZ53xHPmAHKiBbVIdPLOhxTj2lmo/5L4FSBEJbprQD9dd2nZfy+9NQT5OBKqIpIgEFpdeP6CvFpzTETxvAjLE6DunVuFQQOQiYAh/sGeomWuJZpIKDfnNaNbhm9Csn29C+RIRcxAQo52A9IDTF7OFHfEAk8TB9u/TsP2n/Yr9t6NF9CVGAg7nLxNmCbDR6kd5LMSDrz+gm+QwPBRkvFyiQISavbyYvmAVl6puhAIiFwEi1DLDMJ2ah6jQ2PVFqImIa8QjuZL/B9c8fA/SeW+eAAAAAElFTkSuQmCC"
+			},
+			"shapes": [],
+			"document": {
+				"id": "730a16bf-8acf-4a83-9a8d-f0a8a971f600",
+				"src": "https://288120.selcdn.ru/platform-s3/plans/51cbd897-d21b-4621-80da-4d05d732d880/sheet/1/manifest.json",
+				"name": "Чертовщина"
+			}
+		}
+	},
+	"metadata": null,
+	"isArchived": false,
+	"title": null,
+	"owner": "6239bd3deef71301bcc56ab2",
+	"reviewers": [],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_62ebca674d44c540a8f006eb": {
+			"OWNER": true
+		},
+		"623b0ef86c5347019d00000a_62ebca674d44c540a8f006eb": {
+			"RELATED_TO": true
+		}
+	},
+	"createdDate": 1659619952071,
+	"updatedDate": 1659619952071,
+	"assignedTo": null,
+	"parent": null
+}

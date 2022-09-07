@@ -1,0 +1,79 @@
+{
+	"id": "62fe007e002d8e409814f368",
+	"formId": "623b0f296c5347019d00000c",
+	"data": {
+		"info": {
+			"area": [
+				"246d86dd-d078-4e4b-9f04-fbd636b72849"
+			],
+			"cafm": {},
+			"dateTime": 1660813255110,
+			"stopWork": "no",
+			"typeOfWork": [
+				"8708ee66-77d4-4b49-aedf-48d779cf5d8d"
+			],
+			"criticality": "critical",
+			"disturbedPoint": [
+				"a9cf9c3e-e209-45d9-ba02-9b60686a4dff",
+				"f6c78547-3352-4abd-a01f-e5435e1ecf78"
+			],
+			"remedialAction": "Yhh",
+			"contraventionObject": "mtp"
+		},
+		"crCheck": "1",
+		"members": {
+			"executor": [
+				"62e8ed8dcb0eeb1d34ca7928"
+			],
+			"responsible": [
+				"6239bd3deef71301bcc56ab2"
+			]
+		},
+		"dateCheck": {
+			"oldDate": 1660813255110,
+			"dateCount": 0
+		},
+		"issueStatus": [
+			"opened"
+		],
+		"executorChek": "executor",
+		"memberStatus": {
+			"executorStatus": "notIssued",
+			"responsibleStatus": "issued"
+		},
+		"numberObject": {
+			"number": 666
+		},
+		"executorCheck": "62e8ed8dcb0eeb1d34ca7928",
+		"responsibleCheck": "6239bd3deef71301bcc56ab2",
+		"attachmentsAndComment": {
+			"comment": "Test",
+			"attachments": [
+				"62fe008b00e30141a07587b9"
+			]
+		}
+	},
+	"metadata": {},
+	"isArchived": false,
+	"title": null,
+	"owner": null,
+	"reviewers": [
+		"6239bd3deef71301bcc56ab2",
+		"62e8ed8dcb0eeb1d34ca7928"
+	],
+	"relationsData": {
+		"6239bd3deef71301bcc56ab2_62fe007e002d8e409814f368": {
+			"ASSIGNED_TO": true
+		},
+		"623b0f296c5347019d00000c_62fe007e002d8e409814f368": {
+			"RELATED_TO": true
+		},
+		"62e8ed8dcb0eeb1d34ca7928_62fe007e002d8e409814f368": {
+			"ASSIGNED_TO": true
+		}
+	},
+	"createdDate": 1660813734436,
+	"updatedDate": 1660813734436,
+	"assignedTo": "62e8ed8dcb0eeb1d34ca7928",
+	"parent": null
+}
